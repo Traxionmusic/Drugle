@@ -557,7 +557,7 @@ li.item, h2 {
 	.graph {
 		width: 100%;
 		position: relative;
-		height: 50vh;
+		height: 35vh;
 		display: flex;
 		align-items: flex-end;
 	}
@@ -703,9 +703,9 @@ li.item, h2 {
 		background-color: #E74054;
 		padding-left: 1.5vw;
 		padding-right: 1vw;
-		margin: 10vh auto;
+		margin: 18vh auto;
 		width: 90vw;
-		height: 80vh;
+		height: 60vh;
 		color: #D0F4FB;
 		font-size: 1em;
 		font-weight: bold;
@@ -724,7 +724,7 @@ li.item, h2 {
 		/* Guesses table */
 	#table {
 		overflow-y: auto;
-		height: 40vh;
+		height: 50vh;
 		width: 95vw;
 		margin-left: auto;
 		margin-right: auto;
