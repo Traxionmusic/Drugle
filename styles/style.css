@@ -1,0 +1,1937 @@
+* {
+	box-sizing: border-box;
+}
+
+html, body{
+    margin:0 auto;
+    padding:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family: Rockwell;
+	background-color: #D0F4FB;
+}
+
+header {
+	width:100%;
+	height:6vh;
+	position: fixed;
+	top:0;
+	background-color: #E74054;
+}
+
+footer {
+	width:100%;
+	height:13vh;
+	position: fixed;
+	bottom:0;
+	background-color: #E74054; 
+	color: #D0F4FB;
+}
+
+a {
+	color: #D0F4FB;
+}
+
+a:hover {
+	color: #a99c9c;
+}
+
+input:disabled {
+	background: white;
+	color: black;
+	}
+
+/* classes */
+.title {
+	display: flex;
+	justify-content: center;
+	margin-top: 5vh;
+	font-size: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	color: #E74054;
+}
+
+.subtitle {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	font-size: 1.5em;
+	margin-top: -5vh;
+	margin-left: auto;
+	margin-right: auto;
+	color: #E74054;
+}
+
+#awesomplete_list_1 {
+	z-index: 999;
+}
+
+.stat {
+	float: left;
+	text-align: center;
+	width: 25%;
+	margin-top: 1vh;
+	margin-bottom: 2vh;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.1em;
+}
+
+.graph {
+	width: 100%;
+	position: relative;
+	height: 45vh;
+	display: flex;
+	align-items: flex-end;
+}
+
+.bar {
+	width: 8vw;
+	margin: 0 0.5%;
+	display: inline-block;
+    position: relative;
+	bottom: 0;
+	vertical-align: baseline;
+	text-align: center;
+	background-color: #D0F4FB;
+	color: #E74054;
+	height: 30vh;
+}
+
+.guessNumber {
+	position: relative;
+	display: inline-block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+	height: fit-content;
+	font-weight: bolder;
+	font-size: 1.2em;
+}
+
+.label {
+	font-weight: bolder;
+	font-size: 1.2em;
+	width: 8vw;
+	margin: 0 0.5%; 
+	margin-top: 1vh;
+	display: inline-block;
+    position: relative;
+	vertical-align: baseline;
+	text-align: center; 
+	color: #D0F4FB;
+}
+
+.match {
+	font-weight: bolder;
+}
+
+.images {
+	width: 40vw;
+	height: 50vh;
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.item {
+	line-height: 200%;
+}
+
+.bold {
+	font-weight: bolder;
+}
+/* Ids */
+#image-hint {
+	display: flex;
+	justify-content: center;
+	margin-top: 2vh;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.75em;
+	font-weight: 600;
+	text-decoration: underline;
+	width: fit-content;
+	color: #E74054;
+}
+
+#image-hint:hover {
+	cursor: pointer;
+}
+
+#bar-graph {
+	position: relative;
+	left: 35vw;
+	top: 1.3vh;
+	width: fit-content;
+	height: 3vh;
+}
+
+#question-mark {
+	position: relative;
+	left: 60vw;
+	top: 1.3vh;
+	width: fit-content;
+	height: 3vh;
+}
+
+#guessLabel {
+	margin-bottom: 1vh;
+	margin-top: 1vh;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+#acknowledgements {
+	text-align: right;
+	margin-right: 2vw;
+	margin-top: 4vh;
+	font-size: 1.2em;
+}
+
+#labels {
+	display: flex;
+	position: relative;
+	align-items: flex-end;
+	width: 100%
+}
+
+
+#instruction-title {
+	text-align: center;
+}
+
+#identify {
+	text-align: center;
+	font-size: 1.7em;
+}
+
+li.item, h2 {
+	font-size: 1.2em;
+}
+
+#correct {
+	text-align: center;
+	font-size: 3em;
+	margin-top: -5vh;
+	margin-bottom: -1vh;
+}
+
+#correctAnswer {
+	text-align: center;
+	font-size: 1.5em;
+	margin-top: 1vh;
+}
+
+#wrong {
+	text-align: center;
+	font-size: 2em;
+	margin-top: -5vh;
+	margin-bottom: 1.5vh;
+}
+
+#wrongAnswer {
+	text-align: center;
+	font-size: 1.5em;
+	margin-top: 1vh;
+}
+
+#green {
+	background-color: green;
+	color: #c3f5fe;
+}
+
+#yellow {
+	background-color: yellow;
+	color : #E74054;
+}
+/* Modal box */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+	background-color: #E74054;
+	padding-left: 1.5vw;
+	padding-right: 1vw;
+	margin: 10vh auto;
+	width: 50vw;
+	height: 75vh;
+	color: #D0F4FB;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#question-mark-content {
+	animation-name: animatetop;
+	animation-duration: 1s;
+}
+
+#graph-content {
+	animation-name: fadein;
+	animation-duration: 0.7s;
+}
+
+#image-hint-content-enter {
+	animation-name: enterleft;
+	animation-duration: 1s;
+}
+
+#image-hint-content-exit {
+	animation-name: exitright;
+	animation-duration: 1s;
+}
+
+#wrong-content-enter {
+	animation-name: enterleft;
+	animation-duration: 1s;
+}
+
+#wrong-content-exit {
+	animation-name: exitright;
+	animation-duration: 1s;
+}
+
+#correct-content-enter {
+	animation-name: enterleft;
+	animation-duration: 1s;
+}
+
+#correct-content-exit {
+	animation-name: exitright;
+	animation-duration: 1s;
+}
+
+/* close button */
+.close {
+	color: #D0F4FB;
+	opacity: 0.65;	
+	position: relative;
+	left: 45vw;
+	font-size: 3em;
+	font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+	color: #D0F4FB;
+	opacity: 100%;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* Guesses table */
+#table {
+	overflow-y: auto;
+	height: 35vh;
+	width: 90vw;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	display: none;
+}
+
+.divTableRow {
+	display: table-row;
+}
+
+.divTableHeading {
+	background: #ebebeb;
+	display: table-header-group;
+	font-weight: bold;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+.divTableHead {
+	display: table-cell;
+	padding: 3px 10px;
+	border: solid 0.0625em grey;
+	width: 25vw;
+	height: 7vh;
+	word-wrap: break-word;
+	vertical-align: middle;
+}
+
+.divTableBody {
+	display: table-row-group;
+	background-color: white;
+}
+
+.divTableCell {
+	display: table-cell;
+	padding: 3px 10px;
+	border: solid 0.0625em grey;
+	width: 25vw;
+	word-wrap: break-word;
+	vertical-align: middle;
+	height: 10vh;
+}
+
+#tableBody div {
+	animation-name: fadein;
+	animation-name: colorchange;
+	animation-duration: 1.5s;
+}
+
+#row-1 {
+	display:none;
+}
+
+#row-2 {
+	display:none;
+}
+
+#row-3 {
+	display:none;
+}
+
+#row-4 {
+	display:none;
+}
+
+#row-5 {
+	display: none;
+}
+
+#row-6 {
+	display:none;
+}
+
+#row-7 {
+	display:none;
+}
+
+#row-8 {
+	display:none;
+}
+
+@keyframes fadein {
+    0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes animatetop {
+	0% {
+	 margin-top: -50%;
+   }
+   100% {
+	 margin-top: 10vh;
+   }
+ }
+
+@keyframes colorchange {
+	0% {
+		border-color: #D0F4FB;
+		background-color: #D0F4FB;
+		color: #D0F4FB;
+	}
+
+	100% {
+		border-color:grey;
+		color: black;
+	}
+}
+
+@keyframes enterleft {
+	from {
+		margin-left: -50%;
+	}
+
+	to {
+		margin-left: 20%;
+	}
+}
+
+@keyframes exitright {
+	from {
+		margin-left: 20%;
+	}
+
+	to {
+		margin-left: 100%;
+	}
+}
+
+@keyframes enterleftsmall {
+	from {
+		margin-left: -100%;
+	}
+
+	to {
+		margin-left: 5%;
+	}
+}
+
+@keyframes exitrightsmall {
+	from {
+		margin-left: 5%;
+	}
+
+	to {
+		margin-left: 100%;
+	}
+}
+
+@keyframes animatetopsmall {
+	0% {
+	 margin-top: -100%;
+   }
+   100% {
+	 margin-top: 10vh;
+   }
+ }
+
+/* responsiveness */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	header {
+		width:100%;
+		height:6vh;
+		position: fixed;
+		top:0;
+		background-color: #E74054;
+	}
+	
+	footer {
+		width:100%;
+		height: 8vh;
+		position: fixed;
+		bottom: 0;
+		background-color: #E74054; 
+		color: #D0F4FB;
+	}
+	
+	/* classes */
+	.title {
+		display: flex;
+		justify-content: center;
+		margin-top: 5vh;
+		font-size: 1.75em;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.subtitle {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-size: 1.25em;
+		margin-top: -5vh;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.stat {
+		float: left;
+		text-align: center;
+		width: 25%;
+		margin-top: 1vh;
+		margin-bottom: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.1em;
+	}
+	
+	.graph {
+		width: 100%;
+		position: relative;
+		height: 50vh;
+		display: flex;
+		align-items: flex-end;
+	}
+	
+	.bar {
+		width: 10vw;
+		margin: 0 0.5%;
+		display: inline-block;
+		position: relative;
+		bottom: 0;
+		vertical-align: baseline;
+		text-align: center;
+		background-color: #D0F4FB;
+		color: #E74054;
+		height: 30vh;
+	}
+	
+	.guessNumber {
+		position: relative;
+		display: inline-block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: fit-content;
+		font-weight: bolder;
+		font-size: 1.2em;
+	}
+	
+	.label {
+		font-weight: bolder;
+		font-size: 1.2em;
+		width: 10vw;
+		margin: 0 1%; 
+		margin-top: 1vh;
+		display: inline-block;
+		position: relative;
+		vertical-align: baseline;
+		text-align: center; 
+		color: #D0F4FB;
+	}
+
+	.images {
+		width: 75vw;
+		height: 45vh;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* Ids */
+	#type-guess {
+		font-size: 1.25em;
+	}
+	#image-hint {
+		display: flex;
+		justify-content: center;
+		margin-top: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.5em;
+		font-weight: 600;
+		text-decoration: underline;
+		width: fit-content;
+		color: #E74054;
+	}
+
+	#bar-graph {
+		position: relative;
+		left: 20vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#question-mark {
+		position: relative;
+		left: 70vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#guessLabel {
+		margin-bottom: 1vh;
+		margin-top: 1vh;
+		text-align: center;
+		font-size: 1.5em;
+	}
+	
+	#acknowledgements {
+		text-align: right;
+		margin-right: 3vw;
+		margin-top: 1.5vh;
+		font-size: 1em;
+	}
+	
+	#labels {
+		display: flex;
+		position: relative;
+		align-items: flex-end;
+		width: 100%
+	}
+	
+	#identify {
+		text-align: center;
+		font-size: 1.5em;
+	}
+	
+	li.item, h2 {
+		font-size: 1em;
+	}
+	
+	#correct {
+		text-align: center;
+		font-size: 2em;
+		margin-top: -5vh;
+		margin-bottom: -1vh;
+	}
+	
+	#correctAnswer {
+		text-align: center;
+		font-size: 1.2em;
+		margin-top: 1vh;
+	}
+	
+	#wrong {
+		text-align: center;
+		font-size: 1.5em;
+		margin-top: -5vh;
+		margin-bottom: 1.5vh;
+	}
+	
+	#wrongAnswer {
+		text-align: center;
+		font-size: 1em;
+		margin-top: 1vh;
+	}
+
+	/* Modal box */
+	.modal-content {
+		background-color: #E74054;
+		padding-left: 1.5vw;
+		padding-right: 1vw;
+		margin: 10vh auto;
+		width: 90vw;
+		height: 80vh;
+		color: #D0F4FB;
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+		/* close button */
+	.close {
+		color: #D0F4FB;
+		opacity: 0.65;	
+		position: relative;
+		left: 80vw;
+		font-size: 2.5em;
+		font-weight: bold;
+	}
+
+		/* Guesses table */
+	#table {
+		overflow-y: auto;
+		height: 40vh;
+		width: 95vw;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: none;
+	}
+
+	.divTableHead {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		height: 5vh;
+		word-wrap: break-word;
+		vertical-align: middle;
+		font-size: 0.75em;
+	}
+
+	.divTableCell {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		word-wrap: break-word;
+		vertical-align: middle;
+		height: 5vh;
+		font-size: 0.75em;
+	}
+
+	#question-mark-content {
+		animation-name: animatetopsmall;
+		animation-duration: 1s;
+	}
+
+	#image-hint-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#image-hint-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	header {
+		width:100%;
+		height:6vh;
+		position: fixed;
+		top:0;
+		background-color: #E74054;
+	}
+	
+	footer {
+		width:100%;
+		height: 8vh;
+		position: fixed;
+		bottom: 0;
+		background-color: #E74054; 
+		color: #D0F4FB;
+	}
+	
+	/* classes */
+	.title {
+		display: flex;
+		justify-content: center;
+		margin-top: 5vh;
+		font-size: 1.5em;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.subtitle {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-size: 1.25em;
+		margin-top: -5vh;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.stat {
+		float: left;
+		text-align: center;
+		width: 25%;
+		margin-top: 1vh;
+		margin-bottom: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.25em;
+	}
+	
+	.graph {
+		width: 100%;
+		position: relative;
+		height: 45vh;
+		display: flex;
+		align-items: flex-end;
+	}
+	
+	.bar {
+		width: 10vw;
+		margin: 0 0.5%;
+		display: inline-block;
+		position: relative;
+		bottom: 0;
+		vertical-align: baseline;
+		text-align: center;
+		background-color: #D0F4FB;
+		color: #E74054;
+		height: 30vh;
+	}
+	
+	.guessNumber {
+		position: relative;
+		display: inline-block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: fit-content;
+		font-weight: bolder;
+		font-size: 1.5em;
+	}
+	
+	.label {
+		font-weight: bolder;
+		font-size: 1.5em;
+		width: 10vw;
+		margin: 0 1%; 
+		margin-top: 1vh;
+		display: inline-block;
+		position: relative;
+		vertical-align: baseline;
+		text-align: center; 
+		color: #D0F4FB;
+	}
+
+	.images {
+		width: 75vw;
+		height: 50vh;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* Ids */
+	#type-guess {
+		font-size: 1.25em;
+	}
+	#image-hint {
+		display: flex;
+		justify-content: center;
+		margin-top: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.75em;
+		font-weight: 600;
+		text-decoration: underline;
+		width: fit-content;
+		color: #E74054;
+	}
+
+	#bar-graph {
+		position: relative;
+		left: 20vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#question-mark {
+		position: relative;
+		left: 70vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#guessLabel {
+		margin-bottom: 1vh;
+		margin-top: 1vh;
+		text-align: center;
+		font-size: 1.5em;
+	}
+	
+	#acknowledgements {
+		text-align: right;
+		margin-right: 3vw;
+		margin-top: 1.5vh;
+		font-size: 1em;
+	}
+	
+	#labels {
+		display: flex;
+		position: relative;
+		align-items: flex-end;
+		width: 100%
+	}
+	
+	#identify {
+		text-align: center;
+		font-size: 2em;
+	}
+	
+	li.item, h2 {
+		font-size: 1.25em;
+	}
+	
+	#correct {
+		text-align: center;
+		font-size: 3em;
+		margin-top: -3vh;
+	}
+	
+	#correctAnswer {
+		text-align: center;
+		font-size: 1.5em;
+		margin-top: 1vh;
+	}
+	
+	#wrong {
+		text-align: center;
+		font-size: 1.75em;
+		margin-top: -3vh;
+	}
+	
+	#wrongAnswer {
+		text-align: center;
+		font-size: 1.5em;
+		margin-top: 2vh;
+	}
+
+	/* Modal box */
+	.modal-content {
+		background-color: #E74054;
+		padding-left: 1.5vw;
+		padding-right: 1vw;
+		margin: 10vh auto;
+		width: 90vw;
+		height: 80vh;
+		color: #D0F4FB;
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+		/* close button */
+	.close {
+		color: #D0F4FB;
+		opacity: 0.65;	
+		position: relative;
+		left: 82vw;
+		font-size: 3em;
+		font-weight: bold;
+	}
+
+		/* Guesses table */
+	#table {
+		overflow-y: auto;
+		height: 45vh;
+		width: 95vw;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: none;
+	}
+
+	.divTableHead {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		height: 7vh;
+		word-wrap: break-word;
+		vertical-align: middle;
+		font-size: 1em;
+	}
+
+	.divTableCell {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		word-wrap: break-word;
+		vertical-align: middle;
+		height: 7vh;
+		font-size: 1em;
+	}
+
+	#question-mark-content {
+		animation-name: animatetopsmall;
+		animation-duration: 1s;
+	}
+
+	#image-hint-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#image-hint-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	header {
+		width:100%;
+		height:6vh;
+		position: fixed;
+		top:0;
+		background-color: #E74054;
+	}
+	
+	footer {
+		width:100%;
+		height: 8vh;
+		position: fixed;
+		bottom: 0;
+		background-color: #E74054; 
+		color: #D0F4FB;
+	}
+	
+	/* classes */
+	.title {
+		display: flex;
+		justify-content: center;
+		margin-top: 5vh;
+		font-size: 2em;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.subtitle {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-size: 1.5em;
+		margin-top: -5vh;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.stat {
+		float: left;
+		text-align: center;
+		width: 25%;
+		margin-top: 1vh;
+		margin-bottom: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.5em;
+	}
+	
+	.graph {
+		width: 100%;
+		position: relative;
+		height: 45vh;
+		display: flex;
+		align-items: flex-end;
+	}
+	
+	.bar {
+		width: 10vw;
+		margin: 0 0.5%;
+		display: inline-block;
+		position: relative;
+		bottom: 0;
+		vertical-align: baseline;
+		text-align: center;
+		background-color: #D0F4FB;
+		color: #E74054;
+		height: 30vh;
+	}
+	
+	.guessNumber {
+		position: relative;
+		display: inline-block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: fit-content;
+		font-weight: bolder;
+		font-size: 1.5em;
+	}
+	
+	.label {
+		font-weight: bolder;
+		font-size: 1.5em;
+		width: 10vw;
+		margin: 0 1%; 
+		margin-top: 1vh;
+		display: inline-block;
+		position: relative;
+		vertical-align: baseline;
+		text-align: center; 
+		color: #D0F4FB;
+	}
+
+	.images {
+		width: 70vw;
+		height: 50vh;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* Ids */
+	#type-guess {
+		font-size: 1.5em;
+	}
+	#image-hint {
+		display: flex;
+		justify-content: center;
+		margin-top: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.75em;
+		font-weight: 600;
+		text-decoration: underline;
+		width: fit-content;
+		color: #E74054;
+	}
+
+	#bar-graph {
+		position: relative;
+		left: 25vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#question-mark {
+		position: relative;
+		left: 65vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#guessLabel {
+		margin-bottom: 1vh;
+		margin-top: 1vh;
+		text-align: center;
+		font-size: 1.5em;
+	}
+	
+	#acknowledgements {
+		text-align: right;
+		margin-right: 3vw;
+		margin-top: 1.5vh;
+		font-size: 1em;
+	}
+	
+	#labels {
+		display: flex;
+		position: relative;
+		align-items: flex-end;
+		width: 100%
+	}
+	
+	#identify {
+		text-align: center;
+		font-size: 2em;
+	}
+	
+	li.item, h2 {
+		font-size: 1.5em;
+	}
+	
+	#correct {
+		text-align: center;
+		font-size: 3em;
+		margin-top: -3vh;
+	}
+	
+	#correctAnswer {
+		text-align: center;
+		font-size: 1.5em;
+		margin-top: 1vh;
+	}
+	
+	#wrong {
+		text-align: center;
+		font-size: 2em;
+		margin-top: -3vh;
+	}
+	
+	#wrongAnswer {
+		text-align: center;
+		font-size: 1.5em;
+		margin-top: 1vh;
+	}
+
+	/* Modal box */
+	.modal-content {
+		background-color: #E74054;
+		padding-left: 1.5vw;
+		padding-right: 1vw;
+		margin: 10vh auto;
+		width: 90vw;
+		height: 80vh;
+		color: #D0F4FB;
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+		/* close button */
+	.close {
+		color: #D0F4FB;
+		opacity: 0.65;	
+		position: relative;
+		left: 81vw;
+		font-size: 4em;
+		font-weight: bold;
+	}
+
+		/* Guesses table */
+	#table {
+		overflow-y: auto;
+		height: 40vh;
+		width: 95vw;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: none;
+	}
+
+	.divTableHead {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		height: 7vh;
+		word-wrap: break-word;
+		vertical-align: middle;
+		font-size: 1em;
+	}
+
+	.divTableCell {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		word-wrap: break-word;
+		vertical-align: middle;
+		height: 7vh;
+		font-size: 1em;
+	}
+
+	#question-mark-content {
+		animation-name: animatetopsmall;
+		animation-duration: 1s;
+	}
+
+	#image-hint-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#image-hint-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	header {
+		width:100%;
+		height:6vh;
+		position: fixed;
+		top:0;
+		background-color: #E74054;
+	}
+	
+	footer {
+		width:100%;
+		height: 8vh;
+		position: fixed;
+		bottom: 0;
+		background-color: #E74054; 
+		color: #D0F4FB;
+	}
+	
+	/* classes */
+	.title {
+		display: flex;
+		justify-content: center;
+		margin-top: 5vh;
+		font-size: 2em;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.subtitle {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-size: 1.5em;
+		margin-top: -5vh;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.stat {
+		float: left;
+		text-align: center;
+		width: 25%;
+		margin-top: 1vh;
+		margin-bottom: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.5em;
+	}
+	
+	.graph {
+		width: 100%;
+		position: relative;
+		height: 50vh;
+		display: flex;
+		align-items: flex-end;
+	}
+	
+	.bar {
+		width: 10vw;
+		margin: 0 0.5%;
+		display: inline-block;
+		position: relative;
+		bottom: 0;
+		vertical-align: baseline;
+		text-align: center;
+		background-color: #D0F4FB;
+		color: #E74054;
+		height: 30vh;
+	}
+	
+	.guessNumber {
+		position: relative;
+		display: inline-block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: fit-content;
+		font-weight: bolder;
+		font-size: 1.5em;
+	}
+	
+	.label {
+		font-weight: bolder;
+		font-size: 1.5em;
+		width: 10vw;
+		margin: 0 1%; 
+		margin-top: 1vh;
+		display: inline-block;
+		position: relative;
+		vertical-align: baseline;
+		text-align: center; 
+		color: #D0F4FB;
+	}
+
+	.images {
+		width: 60vw;
+		height: 50vh;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* Ids */
+	#type-guess {
+		font-size: 1.5em;
+	}
+	#image-hint {
+		display: flex;
+		justify-content: center;
+		margin-top: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.75em;
+		font-weight: 600;
+		text-decoration: underline;
+		width: fit-content;
+		color: #E74054;
+	}
+
+	#bar-graph {
+		position: relative;
+		left: 25vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#question-mark {
+		position: relative;
+		left: 70vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#guessLabel {
+		margin-bottom: 1vh;
+		margin-top: 1vh;
+		text-align: center;
+		font-size: 1.5em;
+	}
+	
+	#acknowledgements {
+		text-align: right;
+		margin-right: 3vw;
+		margin-top: 1.5vh;
+		font-size: 1em;
+	}
+	
+	#labels {
+		display: flex;
+		position: relative;
+		align-items: flex-end;
+		width: 100%
+	}
+	
+	#identify {
+		text-align: center;
+		font-size: 2em;
+	}
+	
+	li.item, h2 {
+		font-size: 1.5em;
+	}
+	
+	#correct {
+		text-align: center;
+		font-size: 3em;
+		margin-top: -3vh;
+	}
+	
+	#correctAnswer {
+		text-align: center;
+		font-size: 2em;
+		margin-top: 1vh;
+	}
+	
+	#wrong {
+		text-align: center;
+		font-size: 3em;
+		margin-top: -3vh;
+	}
+	
+	#wrongAnswer {
+		text-align: center;
+		font-size: 2em;
+		margin-top: 1vh;
+	}
+
+	/* Modal box */
+	.modal-content {
+		background-color: #E74054;
+		padding-left: 1.5vw;
+		padding-right: 1vw;
+		margin: 10vh auto;
+		width: 90vw;
+		height: 80vh;
+		color: #D0F4FB;
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+		/* close button */
+	.close {
+		color: #D0F4FB;
+		opacity: 0.65;	
+		position: relative;
+		left: 82vw;
+		font-size: 4em;
+		font-weight: bold;
+	}
+
+		/* Guesses table */
+	#table {
+		overflow-y: auto;
+		height: 40vh;
+		width: 95vw;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: none;
+	}
+
+	.divTableHead {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		height: 7vh;
+		word-wrap: break-word;
+		vertical-align: middle;
+		font-size: 1em;
+	}
+
+	.divTableCell {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		word-wrap: break-word;
+		vertical-align: middle;
+		height: 7vh;
+		font-size: 1em;
+	}
+
+	#question-mark-content {
+		animation-name: animatetopsmall;
+		animation-duration: 1s;
+	}
+
+	#image-hint-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#image-hint-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	header {
+		width:100%;
+		height:6vh;
+		position: fixed;
+		top:0;
+		background-color: #E74054;
+	}
+	
+	footer {
+		width:100%;
+		height: 8vh;
+		position: fixed;
+		bottom: 0;
+		background-color: #E74054; 
+		color: #D0F4FB;
+	}
+	
+	/* classes */
+	.title {
+		display: flex;
+		justify-content: center;
+		margin-top: 5vh;
+		font-size: 2.5em;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.subtitle {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-size: 1.75em;
+		margin-top: -7vh;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.stat {
+		float: left;
+		text-align: center;
+		width: 25%;
+		margin-top: 1vh;
+		margin-bottom: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.5em;
+	}
+	
+	.graph {
+		width: 100%;
+		position: relative;
+		height: 50vh;
+		display: flex;
+		align-items: flex-end;
+	}
+	
+	.bar {
+		width: 10vw;
+		margin: 0 0.5%;
+		display: inline-block;
+		position: relative;
+		bottom: 0;
+		vertical-align: baseline;
+		text-align: center;
+		background-color: #D0F4FB;
+		color: #E74054;
+		height: 30vh;
+	}
+	
+	.guessNumber {
+		position: relative;
+		display: inline-block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: fit-content;
+		font-weight: bolder;
+		font-size: 1.75em;
+	}
+	
+	.label {
+		font-weight: bolder;
+		font-size: 1.75em;
+		width: 10vw;
+		margin: 0 1%; 
+		margin-top: 1vh;
+		display: inline-block;
+		position: relative;
+		vertical-align: baseline;
+		text-align: center; 
+		color: #D0F4FB;
+	}
+
+	.images {
+		width: 40vw;
+		height: 50vh;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	/* Ids */
+	#type-guess {
+		font-size: 1.75em;
+	}
+	#image-hint {
+		display: flex;
+		justify-content: center;
+		margin-top: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 2em;
+		font-weight: 600;
+		text-decoration: underline;
+		width: fit-content;
+		color: #E74054;
+	}
+
+	#bar-graph {
+		position: relative;
+		left: 25vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#question-mark {
+		position: relative;
+		left: 70vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#guessLabel {
+		margin-bottom: 1vh;
+		margin-top: 1vh;
+		text-align: center;
+		font-size: 2em;
+	}
+	
+	#acknowledgements {
+		text-align: right;
+		margin-right: 3vw;
+		margin-top: 1.5vh;
+		font-size: 1.25em;
+	}
+	
+	#labels {
+		display: flex;
+		position: relative;
+		align-items: flex-end;
+		width: 100%
+	}
+	
+	#identify {
+		text-align: center;
+		font-size: 2.5em;
+		margin-bottom: 1vh;
+	}
+	
+	li.item, h2 {
+		font-size: 1.75em;
+	}
+	
+	#correct {
+		text-align: center;
+		font-size: 3em;
+		margin-top: -3vh;
+	}
+	
+	#correctAnswer {
+		text-align: center;
+		font-size: 2em;
+		margin-top: 1vh;
+	}
+	
+	#wrong {
+		text-align: center;
+		font-size: 3em;
+		margin-top: -3vh;
+	}
+	
+	#wrongAnswer {
+		text-align: center;
+		font-size: 2em;
+		margin-top: 1vh;
+	}
+
+	/* Modal box */
+	.modal-content {
+		background-color: #E74054;
+		padding-left: 1.5vw;
+		padding-right: 1vw;
+		margin: 10vh auto;
+		width: 60vw;
+		height: 80vh;
+		color: #D0F4FB;
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+		/* close button */
+	.close {
+		color: #D0F4FB;
+		opacity: 0.65;	
+		position: relative;
+		left: 55vw;
+		bottom: 1vh;
+		font-size: 4em;
+		font-weight: bold;
+	}
+
+		/* Guesses table */
+	#table {
+		overflow-y: auto;
+		height: 35vh;
+		width: 85vw;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: none;
+	}
+
+	.divTableHead {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		height: 7vh;
+		word-wrap: break-word;
+		vertical-align: middle;
+		font-size: 1.25em;
+	}
+
+	.divTableCell {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		word-wrap: break-word;
+		vertical-align: middle;
+		height: 7vh;
+		font-size: 1.25em;
+	}
+
+	#question-mark-content {
+		animation-name: animatetop;
+		animation-duration: 1s;
+	}
+
+	#image-hint-content-enter {
+		animation-name: enterleft;
+		animation-duration: 1s;
+	}
+	
+	#image-hint-content-exit {
+		animation-name: exitright;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-enter {
+		animation-name: enterleft;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-exit {
+		animation-name: exitright;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-enter {
+		animation-name: enterleft;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-exit {
+		animation-name: exitright;
+		animation-duration: 1s;
+	}
+}
