@@ -108,6 +108,8 @@ input:disabled {
     	left: 0;
    	right: 0;
     	margin: auto;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
 	height: fit-content;
 	font-weight: bolder;
 	font-size: 1.2em;
@@ -155,6 +157,8 @@ input:disabled {
 	font-size: 1.75em;
 	font-weight: 600;
 	text-decoration: underline;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
 	width: fit-content;
 	color: #E74054;
 }
@@ -167,6 +171,8 @@ input:disabled {
 	position: relative;
 	left: 35vw;
 	top: 1.3vh;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
 	width: fit-content;
 	height: 3vh;
 }
@@ -175,6 +181,8 @@ input:disabled {
 	position: relative;
 	left: 60vw;
 	top: 1.3vh;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
 	width: fit-content;
 	height: 3vh;
 }
@@ -276,43 +284,59 @@ li.item, h2 {
 }
 
 #question-mark-content {
-	animation-name: animatetop;
-	animation-duration: 1s;
+	-webkit-animation-name: animatetop;
+	        animation-name: animatetop;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
 }
 
 #graph-content {
-	animation-name: fadein;
-	animation-duration: 0.7s;
+	-webkit-animation-name: fadein;
+	        animation-name: fadein;
+	-webkit-animation-duration: 0.7s;
+	        animation-duration: 0.7s;
 }
 
 #image-hint-content-enter {
-	animation-name: enterleft;
-	animation-duration: 1s;
+	-webkit-animation-name: enterleft;
+	        animation-name: enterleft;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
 }
 
 #image-hint-content-exit {
-	animation-name: exitright;
-	animation-duration: 1s;
+	-webkit-animation-name: exitright;
+	        animation-name: exitright;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
 }
 
 #wrong-content-enter {
-	animation-name: enterleft;
-	animation-duration: 1s;
+	-webkit-animation-name: enterleft;
+	        animation-name: enterleft;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
 }
 
 #wrong-content-exit {
-	animation-name: exitright;
-	animation-duration: 1s;
+	-webkit-animation-name: exitright;
+	        animation-name: exitright;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
 }
 
 #correct-content-enter {
-	animation-name: enterleft;
-	animation-duration: 1s;
+	-webkit-animation-name: enterleft;
+	        animation-name: enterleft;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
 }
 
 #correct-content-exit {
-	animation-name: exitright;
-	animation-duration: 1s;
+	-webkit-animation-name: exitright;
+	        animation-name: exitright;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
 }
 
 /* close button */
@@ -352,6 +376,7 @@ li.item, h2 {
 	background: #ebebeb;
 	display: table-header-group;
 	font-weight: bold;
+	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
 	z-index: 1;
@@ -383,9 +408,12 @@ li.item, h2 {
 }
 
 #tableBody div {
-	animation-name: fadein;
-	animation-name: colorchange;
-	animation-duration: 1.5s;
+	-webkit-animation-name: fadein;
+	        animation-name: fadein;
+	-webkit-animation-name: colorchange;
+	        animation-name: colorchange;
+	-webkit-animation-duration: 1.5s;
+	        animation-duration: 1.5s;
 }
 
 #row-1 {
@@ -420,6 +448,16 @@ li.item, h2 {
 	display:none;
 }
 
+@-webkit-keyframes fadein {
+    0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
 @keyframes fadein {
     0% {
 		opacity: 0;
@@ -430,6 +468,15 @@ li.item, h2 {
 	}
 }
 
+@-webkit-keyframes animatetop {
+	0% {
+	 margin-top: -100%;
+   }
+   100% {
+	 margin-top: 10vh;
+   }
+ }
+
 @keyframes animatetop {
 	0% {
 	 margin-top: -100%;
@@ -438,6 +485,19 @@ li.item, h2 {
 	 margin-top: 10vh;
    }
  }
+
+@-webkit-keyframes colorchange {
+	0% {
+		border-color: #D0F4FB;
+		background-color: #D0F4FB;
+		color: #D0F4FB;
+	}
+
+	100% {
+		border-color:grey;
+		color: black;
+	}
+}
 
 @keyframes colorchange {
 	0% {
@@ -452,6 +512,16 @@ li.item, h2 {
 	}
 }
 
+@-webkit-keyframes enterleft {
+	from {
+		margin-left: -50%;
+	}
+
+	to {
+		margin-left: 20%;
+	}
+}
+
 @keyframes enterleft {
 	from {
 		margin-left: -50%;
@@ -459,6 +529,16 @@ li.item, h2 {
 
 	to {
 		margin-left: 20%;
+	}
+}
+
+@-webkit-keyframes exitright {
+	from {
+		margin-left: 20%;
+	}
+
+	to {
+		margin-left: 100%;
 	}
 }
 
@@ -472,6 +552,16 @@ li.item, h2 {
 	}
 }
 
+@-webkit-keyframes enterleftsmall {
+	from {
+		margin-left: -100%;
+	}
+
+	to {
+		margin-left: 5%;
+	}
+}
+
 @keyframes enterleftsmall {
 	from {
 		margin-left: -100%;
@@ -479,6 +569,16 @@ li.item, h2 {
 
 	to {
 		margin-left: 5%;
+	}
+}
+
+@-webkit-keyframes exitrightsmall {
+	from {
+		margin-left: 5%;
+	}
+
+	to {
+		margin-left: 100%;
 	}
 }
 
@@ -492,6 +592,15 @@ li.item, h2 {
 	}
 }
 
+@-webkit-keyframes animatetopsmall {
+	0% {
+	 margin-top: -100%;
+   }
+   100% {
+	 margin-top: 18vh;
+   }
+ }
+
 @keyframes animatetopsmall {
 	0% {
 	 margin-top: -100%;
@@ -501,6 +610,16 @@ li.item, h2 {
    }
  }
 
+ @-webkit-keyframes enterleftwide {
+	from {
+		margin-left: -100%;
+	}
+
+	to {
+		margin-left: 15%;
+	}
+}
+
  @keyframes enterleftwide {
 	from {
 		margin-left: -100%;
@@ -508,6 +627,16 @@ li.item, h2 {
 
 	to {
 		margin-left: 15%;
+	}
+}
+
+@-webkit-keyframes exitrightwide {
+	from {
+		margin-left: 20%;
+	}
+
+	to {
+		margin-left: 100%;
 	}
 }
 
@@ -520,6 +649,15 @@ li.item, h2 {
 		margin-left: 100%;
 	}
 }
+
+ @-webkit-keyframes animatetopwide {
+	0% {
+	 margin-top: -100%;
+   }
+   100% {
+	 margin-top: 10vh;
+   }
+ }
 
  @keyframes animatetopwide {
 	0% {
@@ -611,6 +749,8 @@ li.item, h2 {
 		left: 0;
 		right: 0;
 		margin: auto;
+		height: -webkit-fit-content;
+		height: -moz-fit-content;
 		height: fit-content;
 		font-weight: bolder;
 		font-size: 0.5em;
@@ -654,6 +794,8 @@ li.item, h2 {
 		font-size: 0.75em;
 		font-weight: 600;
 		text-decoration: underline;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		color: #E74054;
 	}
@@ -662,6 +804,8 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 0;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -670,6 +814,8 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 0;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -793,38 +939,52 @@ li.item, h2 {
 	}
 
 	#question-mark-content {
-		animation-name: animatetopsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: animatetopsmall;
+		        animation-name: animatetopsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 
 	#image-hint-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#image-hint-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 }
 
@@ -908,6 +1068,8 @@ li.item, h2 {
 		left: 0;
 		right: 0;
 		margin: auto;
+		height: -webkit-fit-content;
+		height: -moz-fit-content;
 		height: fit-content;
 		font-weight: bolder;
 		font-size: 0.5em;
@@ -951,6 +1113,8 @@ li.item, h2 {
 		font-size: 0.75em;
 		font-weight: 600;
 		text-decoration: underline;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		color: #E74054;
 	}
@@ -959,6 +1123,8 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 1.5vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -967,6 +1133,8 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.5vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -1090,38 +1258,52 @@ li.item, h2 {
 	}
 
 	#question-mark-content {
-		animation-name: animatetopsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: animatetopsmall;
+		        animation-name: animatetopsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 
 	#image-hint-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#image-hint-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 }
 
@@ -1205,6 +1387,8 @@ li.item, h2 {
 		left: 0;
 		right: 0;
 		margin: auto;
+		height: -webkit-fit-content;
+		height: -moz-fit-content;
 		height: fit-content;
 		font-weight: bolder;
 		font-size: 0.75em;
@@ -1248,6 +1432,8 @@ li.item, h2 {
 		font-size: 1em;
 		font-weight: 600;
 		text-decoration: underline;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		color: #E74054;
 	}
@@ -1256,6 +1442,8 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -1264,6 +1452,8 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -1387,38 +1577,52 @@ li.item, h2 {
 	}
 
 	#question-mark-content {
-		animation-name: animatetopsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: animatetopsmall;
+		        animation-name: animatetopsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 
 	#image-hint-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#image-hint-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 }
 
@@ -1502,6 +1706,8 @@ li.item, h2 {
 		left: 0;
 		right: 0;
 		margin: auto;
+		height: -webkit-fit-content;
+		height: -moz-fit-content;
 		height: fit-content;
 		font-weight: bolder;
 		font-size: 0.5em;
@@ -1545,6 +1751,8 @@ li.item, h2 {
 		font-size: 0.75em;
 		font-weight: 600;
 		text-decoration: underline;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		color: #E74054;
 	}
@@ -1553,6 +1761,8 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 0;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 4vh;
 	}
@@ -1561,6 +1771,8 @@ li.item, h2 {
 		position: relative;
 		left: 75vw;
 		top: 0;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 4vh;
 	}
@@ -1685,38 +1897,52 @@ li.item, h2 {
 	}
 
 	#question-mark-content {
-		animation-name: animatetopwide;
-		animation-duration: 1s;
+		-webkit-animation-name: animatetopwide;
+		        animation-name: animatetopwide;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 
 	#image-hint-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#image-hint-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 }
 
@@ -1800,6 +2026,8 @@ li.item, h2 {
 		left: 0;
 		right: 0;
 		margin: auto;
+		height: -webkit-fit-content;
+		height: -moz-fit-content;
 		height: fit-content;
 		font-weight: bolder;
 		font-size: 1.2em;
@@ -1843,6 +2071,8 @@ li.item, h2 {
 		font-size: 1.25em;
 		font-weight: 600;
 		text-decoration: underline;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		color: #E74054;
 	}
@@ -1851,6 +2081,8 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -1859,6 +2091,8 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -1982,38 +2216,52 @@ li.item, h2 {
 	}
 
 	#question-mark-content {
-		animation-name: animatetop;
-		animation-duration: 1s;
+		-webkit-animation-name: animatetop;
+		        animation-name: animatetop;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 
 	#image-hint-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#image-hint-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 }
 
@@ -2097,6 +2345,8 @@ li.item, h2 {
 		left: 0;
 		right: 0;
 		margin: auto;
+		height: -webkit-fit-content;
+		height: -moz-fit-content;
 		height: fit-content;
 		font-weight: bolder;
 		font-size: 1.2em;
@@ -2140,6 +2390,8 @@ li.item, h2 {
 		font-size: 1.25em;
 		font-weight: 600;
 		text-decoration: underline;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		color: #E74054;
 	}
@@ -2148,6 +2400,8 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -2156,6 +2410,8 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -2279,38 +2535,52 @@ li.item, h2 {
 	}
 
 	#question-mark-content {
-		animation-name: animatetopsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: animatetopsmall;
+		        animation-name: animatetopsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 
 	#image-hint-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#image-hint-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 }
 
@@ -2394,6 +2664,8 @@ li.item, h2 {
 		left: 0;
 		right: 0;
 		margin: auto;
+		height: -webkit-fit-content;
+		height: -moz-fit-content;
 		height: fit-content;
 		font-weight: bolder;
 		font-size: 1.2em;
@@ -2437,6 +2709,8 @@ li.item, h2 {
 		font-size: 1.25em;
 		font-weight: 600;
 		text-decoration: underline;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		color: #E74054;
 	}
@@ -2445,6 +2719,8 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -2453,6 +2729,8 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -2576,38 +2854,52 @@ li.item, h2 {
 	}
 
 	#question-mark-content {
-		animation-name: animatetopsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: animatetopsmall;
+		        animation-name: animatetopsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 
 	#image-hint-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#image-hint-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 }
 
@@ -2691,6 +2983,8 @@ li.item, h2 {
 		left: 0;
 		right: 0;
 		margin: auto;
+		height: -webkit-fit-content;
+		height: -moz-fit-content;
 		height: fit-content;
 		font-weight: bolder;
 		font-size: 1.2em;
@@ -2734,6 +3028,8 @@ li.item, h2 {
 		font-size: 1.5em;
 		font-weight: 600;
 		text-decoration: underline;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		color: #E74054;
 	}
@@ -2742,6 +3038,8 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -2750,6 +3048,8 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -2871,38 +3171,52 @@ li.item, h2 {
 	}
 
 	#question-mark-content {
-		animation-name: animatetop;
-		animation-duration: 1s;
+		-webkit-animation-name: animatetop;
+		        animation-name: animatetop;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 
 	#image-hint-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#image-hint-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 }
 
@@ -2986,6 +3300,8 @@ li.item, h2 {
 		left: 0;
 		right: 0;
 		margin: auto;
+		height: -webkit-fit-content;
+		height: -moz-fit-content;
 		height: fit-content;
 		font-weight: bolder;
 		font-size: 0.5em;
@@ -3029,6 +3345,8 @@ li.item, h2 {
 		font-size: 1em;
 		font-weight: 600;
 		text-decoration: underline;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		color: #E74054;
 	}
@@ -3037,6 +3355,8 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 1.5vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 4vh;
 	}
@@ -3045,6 +3365,8 @@ li.item, h2 {
 		position: relative;
 		left: 75vw;
 		top: 1.5vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 4vh;
 	}
@@ -3166,38 +3488,52 @@ li.item, h2 {
 	}
 
 	#question-mark-content {
-		animation-name: animatetopwide;
-		animation-duration: 1s;
+		-webkit-animation-name: animatetopwide;
+		        animation-name: animatetopwide;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 
 	#image-hint-content-enter {
-		animation-name: enterleftwide;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftwide;
+		        animation-name: enterleftwide;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#image-hint-content-exit {
-		animation-name: exitrightwide;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightwide;
+		        animation-name: exitrightwide;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-enter {
-		animation-name: enterleftwide;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftwide;
+		        animation-name: enterleftwide;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-exit {
-		animation-name: exitrightwide;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightwide;
+		        animation-name: exitrightwide;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-enter {
-		animation-name: enterleftwide;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftwide;
+		        animation-name: enterleftwide;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-exit {
-		animation-name: exitrightwide;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightwide;
+		        animation-name: exitrightwide;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 }
 
@@ -3281,6 +3617,8 @@ li.item, h2 {
 		left: 0;
 		right: 0;
 		margin: auto;
+		height: -webkit-fit-content;
+		height: -moz-fit-content;
 		height: fit-content;
 		font-weight: bolder;
 		font-size: 1.2em;
@@ -3324,6 +3662,8 @@ li.item, h2 {
 		font-size: 1.5em;
 		font-weight: 600;
 		text-decoration: underline;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		color: #E74054;
 	}
@@ -3332,6 +3672,8 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -3340,6 +3682,8 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -3461,38 +3805,52 @@ li.item, h2 {
 	}
 
 	#question-mark-content {
-		animation-name: animatetopsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: animatetopsmall;
+		        animation-name: animatetopsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 
 	#image-hint-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#image-hint-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 }
 
@@ -3576,6 +3934,8 @@ li.item, h2 {
 		left: 0;
 		right: 0;
 		margin: auto;
+		height: -webkit-fit-content;
+		height: -moz-fit-content;
 		height: fit-content;
 		font-weight: bolder;
 		font-size: 1.5em;
@@ -3619,6 +3979,8 @@ li.item, h2 {
 		font-size: 1.75em;
 		font-weight: 600;
 		text-decoration: underline;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		color: #E74054;
 	}
@@ -3627,6 +3989,8 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -3635,6 +3999,8 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -3754,38 +4120,52 @@ li.item, h2 {
 	}
 
 	#question-mark-content {
-		animation-name: animatetop;
-		animation-duration: 1s;
+		-webkit-animation-name: animatetop;
+		        animation-name: animatetop;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 
 	#image-hint-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#image-hint-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 }
 
@@ -3869,6 +4249,8 @@ li.item, h2 {
 		left: 0;
 		right: 0;
 		margin: auto;
+		height: -webkit-fit-content;
+		height: -moz-fit-content;
 		height: fit-content;
 		font-weight: bolder;
 		font-size: 1.5em;
@@ -3912,6 +4294,8 @@ li.item, h2 {
 		font-size: 1.75em;
 		font-weight: 600;
 		text-decoration: underline;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		color: #E74054;
 	}
@@ -3920,6 +4304,8 @@ li.item, h2 {
 		position: relative;
 		left: 25vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -3928,6 +4314,8 @@ li.item, h2 {
 		position: relative;
 		left: 65vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -4047,38 +4435,52 @@ li.item, h2 {
 	}
 
 	#question-mark-content {
-		animation-name: animatetop;
-		animation-duration: 1s;
+		-webkit-animation-name: animatetop;
+		        animation-name: animatetop;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 
 	#image-hint-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#image-hint-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 }
 
@@ -4162,6 +4564,8 @@ li.item, h2 {
 		left: 0;
 		right: 0;
 		margin: auto;
+		height: -webkit-fit-content;
+		height: -moz-fit-content;
 		height: fit-content;
 		font-weight: bolder;
 		font-size: 1.5em;
@@ -4205,6 +4609,8 @@ li.item, h2 {
 		font-size: 1.75em;
 		font-weight: 600;
 		text-decoration: underline;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		color: #E74054;
 	}
@@ -4213,6 +4619,8 @@ li.item, h2 {
 		position: relative;
 		left: 25vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 5vh;
 	}
@@ -4221,6 +4629,8 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 5vh;
 	}
@@ -4340,38 +4750,52 @@ li.item, h2 {
 	}
 
 	#question-mark-content {
-		animation-name: animatetopwide;
-		animation-duration: 1s;
+		-webkit-animation-name: animatetopwide;
+		        animation-name: animatetopwide;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 
 	#image-hint-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#image-hint-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-enter {
-		animation-name: enterleftsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleftsmall;
+		        animation-name: enterleftsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-exit {
-		animation-name: exitrightsmall;
-		animation-duration: 1s;
+		-webkit-animation-name: exitrightsmall;
+		        animation-name: exitrightsmall;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 }
 
@@ -4455,6 +4879,8 @@ li.item, h2 {
 		left: 0;
 		right: 0;
 		margin: auto;
+		height: -webkit-fit-content;
+		height: -moz-fit-content;
 		height: fit-content;
 		font-weight: bolder;
 		font-size: 1.75em;
@@ -4498,6 +4924,8 @@ li.item, h2 {
 		font-size: 2em;
 		font-weight: 600;
 		text-decoration: underline;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		color: #E74054;
 	}
@@ -4506,6 +4934,8 @@ li.item, h2 {
 		position: relative;
 		left: 25vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -4514,6 +4944,8 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -4635,38 +5067,52 @@ li.item, h2 {
 	}
 
 	#question-mark-content {
-		animation-name: animatetop;
-		animation-duration: 1s;
+		-webkit-animation-name: animatetop;
+		        animation-name: animatetop;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 
 	#image-hint-content-enter {
-		animation-name: enterleft;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleft;
+		        animation-name: enterleft;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#image-hint-content-exit {
-		animation-name: exitright;
-		animation-duration: 1s;
+		-webkit-animation-name: exitright;
+		        animation-name: exitright;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-enter {
-		animation-name: enterleft;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleft;
+		        animation-name: enterleft;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-exit {
-		animation-name: exitright;
-		animation-duration: 1s;
+		-webkit-animation-name: exitright;
+		        animation-name: exitright;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-enter {
-		animation-name: enterleft;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleft;
+		        animation-name: enterleft;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-exit {
-		animation-name: exitright;
-		animation-duration: 1s;
+		-webkit-animation-name: exitright;
+		        animation-name: exitright;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 }
 
@@ -4750,6 +5196,8 @@ li.item, h2 {
 		left: 0;
 		right: 0;
 		margin: auto;
+		height: -webkit-fit-content;
+		height: -moz-fit-content;
 		height: fit-content;
 		font-weight: bolder;
 		font-size: 1.75em;
@@ -4793,6 +5241,8 @@ li.item, h2 {
 		font-size: 2em;
 		font-weight: 600;
 		text-decoration: underline;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		color: #E74054;
 	}
@@ -4801,6 +5251,8 @@ li.item, h2 {
 		position: relative;
 		left: 25vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -4809,6 +5261,8 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
 		width: fit-content;
 		height: 3vh;
 	}
@@ -4932,37 +5386,51 @@ li.item, h2 {
 	}
 
 	#question-mark-content {
-		animation-name: animatetop;
-		animation-duration: 1s;
+		-webkit-animation-name: animatetop;
+		        animation-name: animatetop;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 
 	#image-hint-content-enter {
-		animation-name: enterleft;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleft;
+		        animation-name: enterleft;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#image-hint-content-exit {
-		animation-name: exitright;
-		animation-duration: 1s;
+		-webkit-animation-name: exitright;
+		        animation-name: exitright;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-enter {
-		animation-name: enterleft;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleft;
+		        animation-name: enterleft;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#wrong-content-exit {
-		animation-name: exitright;
-		animation-duration: 1s;
+		-webkit-animation-name: exitright;
+		        animation-name: exitright;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-enter {
-		animation-name: enterleft;
-		animation-duration: 1s;
+		-webkit-animation-name: enterleft;
+		        animation-name: enterleft;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 	
 	#correct-content-exit {
-		animation-name: exitright;
-		animation-duration: 1s;
+		-webkit-animation-name: exitright;
+		        animation-name: exitright;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
 	}
 }
