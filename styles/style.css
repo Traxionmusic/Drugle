@@ -171,9 +171,7 @@ input:disabled {
 	position: relative;
 	left: 35vw;
 	top: 1.3vh;
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
-	width: fit-content;
+	width: 3vh;
 	height: 3vh;
 }
 
@@ -181,9 +179,7 @@ input:disabled {
 	position: relative;
 	left: 60vw;
 	top: 1.3vh;
-	width: -webkit-fit-content;
-	width: -moz-fit-content;
-	width: fit-content;
+	width: 3vh;
 	height: 3vh;
 }
 
@@ -804,9 +800,7 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 0;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -814,9 +808,7 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 0;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -1123,9 +1115,7 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 1.5vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -1133,9 +1123,7 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.5vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -1442,9 +1430,7 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -1452,9 +1438,7 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -1761,9 +1745,7 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 0;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 4vh;
 		height: 4vh;
 	}
 	
@@ -1771,9 +1753,7 @@ li.item, h2 {
 		position: relative;
 		left: 75vw;
 		top: 0;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 4vh;
 		height: 4vh;
 	}
 	
@@ -2081,9 +2061,7 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -2091,9 +2069,7 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -2400,9 +2376,7 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -2410,9 +2384,7 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -2719,9 +2691,7 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -2729,9 +2699,7 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -3038,9 +3006,7 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -3048,9 +3014,7 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -3355,9 +3319,7 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 1.5vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 4vh;
 		height: 4vh;
 	}
 	
@@ -3365,9 +3327,7 @@ li.item, h2 {
 		position: relative;
 		left: 75vw;
 		top: 1.5vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 4vh;
 		height: 4vh;
 	}
 	
@@ -3672,9 +3632,7 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -3682,9 +3640,7 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -3989,9 +3945,7 @@ li.item, h2 {
 		position: relative;
 		left: 20vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -3999,9 +3953,7 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -4304,9 +4256,7 @@ li.item, h2 {
 		position: relative;
 		left: 25vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -4314,9 +4264,7 @@ li.item, h2 {
 		position: relative;
 		left: 65vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -4619,9 +4567,7 @@ li.item, h2 {
 		position: relative;
 		left: 25vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 5vh;
 		height: 5vh;
 	}
 	
@@ -4629,9 +4575,7 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 5vh;
 		height: 5vh;
 	}
 	
@@ -4934,9 +4878,7 @@ li.item, h2 {
 		position: relative;
 		left: 25vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -4944,9 +4886,7 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -5251,9 +5191,7 @@ li.item, h2 {
 		position: relative;
 		left: 25vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
@@ -5261,9 +5199,7 @@ li.item, h2 {
 		position: relative;
 		left: 70vw;
 		top: 1.3vh;
-		width: -webkit-fit-content;
-		width: -moz-fit-content;
-		width: fit-content;
+		width: 3vh;
 		height: 3vh;
 	}
 	
