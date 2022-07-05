@@ -432,7 +432,7 @@ li.item, h2 {
 
 @keyframes animatetop {
 	0% {
-	 margin-top: -50%;
+	 margin-top: -100%;
    }
    100% {
 	 margin-top: 10vh;
@@ -497,13 +497,338 @@ li.item, h2 {
 	 margin-top: -100%;
    }
    100% {
+	 margin-top: 18vh;
+   }
+ }
+
+ @keyframes enterleftwide {
+	from {
+		margin-left: -100%;
+	}
+
+	to {
+		margin-left: 15%;
+	}
+}
+
+@keyframes exitrightwide {
+	from {
+		margin-left: 20%;
+	}
+
+	to {
+		margin-left: 100%;
+	}
+}
+
+ @keyframes animatetopwide {
+	0% {
+	 margin-top: -100%;
+   }
+   100% {
 	 margin-top: 10vh;
    }
  }
 
 /* responsiveness */
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 240px) {
+	header {
+		width:100%;
+		height:6vh;
+		position: fixed;
+		top:0;
+		background-color: #E74054;
+	}
+	
+	footer {
+		width:100%;
+		height: 8vh;
+		position: fixed;
+		bottom: 0;
+		background-color: #E74054; 
+		color: #D0F4FB;
+	}
+	
+	/* classes */
+	.title {
+		display: flex;
+		justify-content: center;
+		margin-top: 1vh;
+		font-size: 0.75em;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.subtitle {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-size: 0.75em;
+		margin-top: -8vh;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.stat {
+		float: left;
+		text-align: center;
+		width: 25%;
+		margin-top: 1vh;
+		margin-bottom: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 0.5em;
+	}
+	
+	.graph {
+		width: 100%;
+		position: relative;
+		height: 40vh;
+		display: flex;
+		align-items: flex-end;
+	}
+	
+	.bar {
+		width: 10vw;
+		margin: 0 0.5%;
+		display: inline-block;
+		position: relative;
+		bottom: 0;
+		vertical-align: baseline;
+		text-align: center;
+		background-color: #D0F4FB;
+		color: #E74054;
+		height: 30vh;
+	}
+	
+	.guessNumber {
+		position: relative;
+		display: inline-block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: fit-content;
+		font-weight: bolder;
+		font-size: 0.5em;
+	}
+	
+	.label {
+		font-weight: bolder;
+		font-size: 0.5em;
+		width: 10vw;
+		margin: 0 1%; 
+		margin-top: 1vh;
+		display: inline-block;
+		position: relative;
+		vertical-align: baseline;
+		text-align: center; 
+		color: #D0F4FB;
+	}
+
+	.images {
+		width: 60vw;
+		height: 40vh;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.awesomplete > ul > li {
+			font-size: .65em;
+	}
+
+	/* Ids */
+	#type-guess {
+		font-size: 0.65em;
+	}
+	#image-hint {
+		display: flex;
+		justify-content: center;
+		margin-top: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 0.75em;
+		font-weight: 600;
+		text-decoration: underline;
+		width: fit-content;
+		color: #E74054;
+	}
+
+	#bar-graph {
+		position: relative;
+		left: 20vw;
+		top: 0;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#question-mark {
+		position: relative;
+		left: 70vw;
+		top: 0;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#guessLabel {
+		margin-bottom: 1vh;
+		margin-top: 1vh;
+		text-align: center;
+		font-size: 0.75em;
+	}
+	
+	#acknowledgements {
+		text-align: right;
+		margin-right: 3vw;
+		margin-top: 2vh;
+		font-size: 0.25em;
+	}
+	
+	#labels {
+		display: flex;
+		position: relative;
+		align-items: flex-end;
+		width: 100%
+	}
+	
+	#identify {
+		text-align: center;
+		font-size: 0.75em;
+	}
+		
+	h2 {
+		font-size: 0.75em;
+		margin-top: -2vh;
+	}
+
+	li.item {
+		font-size: 0.5em;
+		margin-right: 1.25vw;
+	}
+
+	#correct {
+		text-align: center;
+		font-size: 1em;
+		margin-top: -4vh;
+		margin-bottom: 1vh;
+	}
+	
+	#correctAnswer {
+		text-align: center;
+		font-size: 0.75em;
+		margin-top: 1vh;
+	}
+	
+	#wrong {
+		text-align: center;
+		font-size: 0.75em;
+		margin-top: -1vh;
+		margin-bottom: 1vh;
+	}
+	
+	#wrongAnswer {
+		text-align: center;
+		font-size: 0.75em;
+		margin-top: 1vh;
+	}
+
+	/* Modal box */
+	.modal-content {
+		background-color: #E74054;
+		padding-left: 1.5vw;
+		padding-right: 1vw;
+		margin: 18vh auto;
+		width: 90vw;
+		height: 70vh;
+		color: #D0F4FB;
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+		/* close button */
+	.close {
+		color: #D0F4FB;
+		opacity: 0.65;	
+		position: relative;
+		left: 82vw;
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+		/* Guesses table */
+	#table {
+		overflow-y: auto;
+		height: 45vh;
+		width: 95vw;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: none;
+	}
+
+	.divTableHead {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		height: 5vh;
+		word-wrap: break-word;
+		vertical-align: middle;
+		font-size: 0.25em;
+	}
+
+	.divTableCell {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		word-wrap: break-word;
+		vertical-align: middle;
+		height: 5vh;
+		font-size: 0.25em;
+	}
+
+	#question-mark-content {
+		animation-name: animatetopsmall;
+		animation-duration: 1s;
+	}
+
+	#image-hint-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#image-hint-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+}
+
+@media only screen and (min-width: 295px) {
 	header {
 		width:100%;
 		height:6vh;
@@ -526,7 +851,7 @@ li.item, h2 {
 		display: flex;
 		justify-content: center;
 		margin-top: 5vh;
-		font-size: 1.75em;
+		font-size: 0.75em;
 		margin-left: auto;
 		margin-right: auto;
 		color: #E74054;
@@ -536,7 +861,7 @@ li.item, h2 {
 		display: flex;
 		justify-content: center;
 		text-align: center;
-		font-size: 1.25em;
+		font-size: 0.75em;
 		margin-top: -5vh;
 		margin-left: auto;
 		margin-right: auto;
@@ -551,13 +876,905 @@ li.item, h2 {
 		margin-bottom: 2vh;
 		margin-left: auto;
 		margin-right: auto;
-		font-size: 1.1em;
+		font-size: 0.5em;
 	}
 	
 	.graph {
 		width: 100%;
 		position: relative;
-		height: 35vh;
+		height: 30vh;
+		display: flex;
+		align-items: flex-end;
+	}
+	
+	.bar {
+		width: 10vw;
+		margin: 0 0.5%;
+		display: inline-block;
+		position: relative;
+		bottom: 0;
+		vertical-align: baseline;
+		text-align: center;
+		background-color: #D0F4FB;
+		color: #E74054;
+		height: 30vh;
+	}
+	
+	.guessNumber {
+		position: relative;
+		display: inline-block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: fit-content;
+		font-weight: bolder;
+		font-size: 0.5em;
+	}
+	
+	.label {
+		font-weight: bolder;
+		font-size: 0.5em;
+		width: 10vw;
+		margin: 0 1%; 
+		margin-top: 1vh;
+		display: inline-block;
+		position: relative;
+		vertical-align: baseline;
+		text-align: center; 
+		color: #D0F4FB;
+	}
+
+	.images {
+		width: 60vw;
+		height: 30vh;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.awesomplete > ul > li {
+			font-size: .65em;
+	}
+
+	/* Ids */
+	#type-guess {
+		font-size: 0.65em;
+	}
+	#image-hint {
+		display: flex;
+		justify-content: center;
+		margin-top: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 0.75em;
+		font-weight: 600;
+		text-decoration: underline;
+		width: fit-content;
+		color: #E74054;
+	}
+
+	#bar-graph {
+		position: relative;
+		left: 20vw;
+		top: 1.5vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#question-mark {
+		position: relative;
+		left: 70vw;
+		top: 1.5vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#guessLabel {
+		margin-bottom: 1vh;
+		margin-top: 1vh;
+		text-align: center;
+		font-size: 0.75em;
+	}
+	
+	#acknowledgements {
+		text-align: right;
+		margin-right: 3vw;
+		margin-top: 2vh;
+		font-size: 0.5em;
+	}
+	
+	#labels {
+		display: flex;
+		position: relative;
+		align-items: flex-end;
+		width: 100%
+	}
+	
+	#identify {
+		text-align: center;
+		font-size: 1em;
+	}
+		
+	h2 {
+		font-size: 0.75em;
+		margin-top: -2vh;
+	}
+
+	li.item {
+		font-size: 0.55em;
+		margin-right: 1.25vw;
+	}
+
+	#correct {
+		text-align: center;
+		font-size: 1em;
+		margin-top: -4vh;
+		margin-bottom: 1vh;
+	}
+	
+	#correctAnswer {
+		text-align: center;
+		font-size: 0.75em;
+		margin-top: 1vh;
+	}
+	
+	#wrong {
+		text-align: center;
+		font-size: 0.75em;
+		margin-top: -4vh;
+		margin-bottom: 1vh;
+	}
+	
+	#wrongAnswer {
+		text-align: center;
+		font-size: 0.75em;
+		margin-top: 1vh;
+	}
+
+	/* Modal box */
+	.modal-content {
+		background-color: #E74054;
+		padding-left: 1.5vw;
+		padding-right: 1vw;
+		margin: 18vh auto;
+		width: 90vw;
+		height: 50vh;
+		color: #D0F4FB;
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+		/* close button */
+	.close {
+		color: #D0F4FB;
+		opacity: 0.65;	
+		position: relative;
+		left: 81vw;
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+
+		/* Guesses table */
+	#table {
+		overflow-y: auto;
+		height: 55vh;
+		width: 95vw;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: none;
+	}
+
+	.divTableHead {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		height: 5vh;
+		word-wrap: break-word;
+		vertical-align: middle;
+		font-size: 0.5em;
+	}
+
+	.divTableCell {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		word-wrap: break-word;
+		vertical-align: middle;
+		height: 5vh;
+		font-size: 0.5em;
+	}
+
+	#question-mark-content {
+		animation-name: animatetopsmall;
+		animation-duration: 1s;
+	}
+
+	#image-hint-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#image-hint-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+}
+
+@media only screen and (min-width: 320px) {
+	header {
+		width:100%;
+		height:6vh;
+		position: fixed;
+		top:0;
+		background-color: #E74054;
+	}
+	
+	footer {
+		width:100%;
+		height: 8vh;
+		position: fixed;
+		bottom: 0;
+		background-color: #E74054; 
+		color: #D0F4FB;
+	}
+	
+	/* classes */
+	.title {
+		display: flex;
+		justify-content: center;
+		margin-top: 5vh;
+		font-size: 1em;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.subtitle {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-size: 0.75em;
+		margin-top: -5vh;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.stat {
+		float: left;
+		text-align: center;
+		width: 25%;
+		margin-top: 1vh;
+		margin-bottom: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 0.75em;
+	}
+	
+	.graph {
+		width: 100%;
+		position: relative;
+		height: 25vh;
+		display: flex;
+		align-items: flex-end;
+	}
+	
+	.bar {
+		width: 10vw;
+		margin: 0 0.5%;
+		display: inline-block;
+		position: relative;
+		bottom: 0;
+		vertical-align: baseline;
+		text-align: center;
+		background-color: #D0F4FB;
+		color: #E74054;
+		height: 30vh;
+	}
+	
+	.guessNumber {
+		position: relative;
+		display: inline-block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: fit-content;
+		font-weight: bolder;
+		font-size: 0.75em;
+	}
+	
+	.label {
+		font-weight: bolder;
+		font-size: 0.75em;
+		width: 10vw;
+		margin: 0 1%; 
+		margin-top: 1vh;
+		display: inline-block;
+		position: relative;
+		vertical-align: baseline;
+		text-align: center; 
+		color: #D0F4FB;
+	}
+
+	.images {
+		width: 60vw;
+		height: 30vh;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.awesomplete > ul > li {
+			font-size: .75em;
+	}
+
+	/* Ids */
+	#type-guess {
+		font-size: 0.75em;
+	}
+	#image-hint {
+		display: flex;
+		justify-content: center;
+		margin-top: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1em;
+		font-weight: 600;
+		text-decoration: underline;
+		width: fit-content;
+		color: #E74054;
+	}
+
+	#bar-graph {
+		position: relative;
+		left: 20vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#question-mark {
+		position: relative;
+		left: 70vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#guessLabel {
+		margin-bottom: 1vh;
+		margin-top: 1vh;
+		text-align: center;
+		font-size: 1em;
+	}
+	
+	#acknowledgements {
+		text-align: right;
+		margin-right: 3vw;
+		margin-top: 2vh;
+		font-size: 0.5em;
+	}
+	
+	#labels {
+		display: flex;
+		position: relative;
+		align-items: flex-end;
+		width: 100%
+	}
+	
+	#identify {
+		text-align: center;
+		font-size: 1em;
+	}
+		
+	h2 {
+		font-size: 1em;
+		margin-top: -2vh;
+	}
+
+	li.item {
+		font-size: 0.65em;
+		margin-right: 1vw;
+	}
+
+	#correct {
+		text-align: center;
+		font-size: 1.5em;
+		margin-top: -4vh;
+		margin-bottom: 1vh;
+	}
+	
+	#correctAnswer {
+		text-align: center;
+		font-size: 1.25em;
+		margin-top: 1vh;
+	}
+	
+	#wrong {
+		text-align: center;
+		font-size: 1.25em;
+		margin-top: -4vh;
+		margin-bottom: 1vh;
+	}
+	
+	#wrongAnswer {
+		text-align: center;
+		font-size: 1.25em;
+		margin-top: 1vh;
+	}
+
+	/* Modal box */
+	.modal-content {
+		background-color: #E74054;
+		padding-left: 1.5vw;
+		padding-right: 1vw;
+		margin: 18vh auto;
+		width: 90vw;
+		height: 55vh;
+		color: #D0F4FB;
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+		/* close button */
+	.close {
+		color: #D0F4FB;
+		opacity: 0.65;	
+		position: relative;
+		left: 80vw;
+		font-size: 2em;
+		font-weight: bold;
+	}
+
+		/* Guesses table */
+	#table {
+		overflow-y: auto;
+		height: 80vh;
+		width: 95vw;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: none;
+	}
+
+	.divTableHead {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		height: 5vh;
+		word-wrap: break-word;
+		vertical-align: middle;
+		font-size: 0.5em;
+	}
+
+	.divTableCell {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		word-wrap: break-word;
+		vertical-align: middle;
+		height: 5vh;
+		font-size: 0.5em;
+	}
+
+	#question-mark-content {
+		animation-name: animatetopsmall;
+		animation-duration: 1s;
+	}
+
+	#image-hint-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#image-hint-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+}
+
+@media only screen and (height: 240px) {
+	header {
+		width:100%;
+		height:8vh;
+		position: fixed;
+		top:0;
+		background-color: #E74054;
+	}
+	
+	footer {
+		width:100%;
+		height: 8vh;
+		position: fixed;
+		bottom: 0;
+		background-color: #E74054; 
+		color: #D0F4FB;
+	}
+	
+	/* classes */
+	.title {
+		display: flex;
+		justify-content: center;
+		margin-top: 5vh;
+		font-size: 0.75em;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.subtitle {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-size: 0.5em;
+		margin-top: -5vh;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.stat {
+		float: left;
+		text-align: center;
+		width: 25%;
+		margin-top: 1vh;
+		margin-bottom: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 0.5em;
+	}
+	
+	.graph {
+		width: 100%;
+		position: relative;
+		height: 40vh;
+		display: flex;
+		align-items: flex-end;
+	}
+	
+	.bar {
+		width: 10vw;
+		margin: 0 0.5%;
+		display: inline-block;
+		position: relative;
+		bottom: 0;
+		vertical-align: baseline;
+		text-align: center;
+		background-color: #D0F4FB;
+		color: #E74054;
+		height: 30vh;
+	}
+	
+	.guessNumber {
+		position: relative;
+		display: inline-block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: fit-content;
+		font-weight: bolder;
+		font-size: 0.5em;
+	}
+	
+	.label {
+		font-weight: bolder;
+		font-size: 0.5em;
+		width: 10vw;
+		margin: 0 1%; 
+		margin-top: 1vh;
+		display: inline-block;
+		position: relative;
+		vertical-align: baseline;
+		text-align: center; 
+		color: #D0F4FB;
+	}
+
+	.images {
+		width: 60vw;
+		height: 50vh;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.awesomplete > ul > li {
+			font-size: .5em;
+	}
+
+	/* Ids */
+	#type-guess {
+		font-size: 0.5em;
+	}
+	#image-hint {
+		display: flex;
+		justify-content: center;
+		margin-top: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 0.75em;
+		font-weight: 600;
+		text-decoration: underline;
+		width: fit-content;
+		color: #E74054;
+	}
+
+	#bar-graph {
+		position: relative;
+		left: 20vw;
+		top: 0;
+		width: fit-content;
+		height: 4vh;
+	}
+	
+	#question-mark {
+		position: relative;
+		left: 75vw;
+		top: 0;
+		width: fit-content;
+		height: 4vh;
+	}
+	
+	#guessLabel {
+		margin-bottom: 1vh;
+		margin-top: 1vh;
+		text-align: center;
+		font-size: 0.75em;
+	}
+	
+	#acknowledgements {
+		text-align: right;
+		margin-right: 3vw;
+		margin-top: 2vh;
+		font-size: 0.10em;
+	}
+	
+	#labels {
+		display: flex;
+		position: relative;
+		align-items: flex-end;
+		width: 100%
+	}
+	
+	#identify {
+		text-align: center;
+		font-size: 0.75em;
+		margin-top: -2vh;
+	}
+		
+	h2 {
+		font-size: 0.75em;
+		margin-top: -2vh;
+	}
+
+	li.item {
+		font-size: 0.5em;
+		margin-right: 1vw;
+	}
+
+	#correct {
+		text-align: center;
+		font-size: 1em;
+		margin-top: -4vh;
+		margin-bottom: -4vh;
+	}
+	
+	#correctAnswer {
+		text-align: center;
+		font-size: 0.75em;
+		margin-top: 1vh;
+	}
+	
+	#wrong {
+		text-align: center;
+		font-size: 1em;
+		margin-top: -4vh;
+		margin-bottom: 1vh;
+	}
+	
+	#wrongAnswer {
+		text-align: center;
+		font-size: 0.75em;
+		margin-top: 1vh;
+	}
+
+	/* Modal box */
+	.modal-content {
+		background-color: #E74054;
+		padding-left: 1.5vw;
+		padding-right: 1vw;
+		margin: 10vh auto;
+		width: 90vw;
+		height: 75vh;
+		color: #D0F4FB;
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+		/* close button */
+	.close {
+		color: #D0F4FB;
+		opacity: 0.65;	
+		position: relative;
+		left: 84vw;
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+		/* Guesses table */
+	#table {
+		overflow-y: auto;
+		height: 30vh;
+		width: 95vw;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: none;
+	}
+
+	.divTableHead {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		height: 5vh;
+		word-wrap: break-word;
+		vertical-align: middle;
+		font-size: 0.15em;
+	}
+
+	.divTableCell {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		word-wrap: break-word;
+		vertical-align: middle;
+		height: 5vh;
+		font-size: 0.15em;
+	}
+
+	#question-mark-content {
+		animation-name: animatetopwide;
+		animation-duration: 1s;
+	}
+
+	#image-hint-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#image-hint-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+}
+
+@media only screen and (min-width: 360px) {
+	header {
+		width:100%;
+		height:6vh;
+		position: fixed;
+		top:0;
+		background-color: #E74054;
+	}
+	
+	footer {
+		width:100%;
+		height: 8vh;
+		position: fixed;
+		bottom: 0;
+		background-color: #E74054; 
+		color: #D0F4FB;
+	}
+	
+	/* classes */
+	.title {
+		display: flex;
+		justify-content: center;
+		margin-top: 5vh;
+		font-size: 1.5em;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.subtitle {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-size: 1em;
+		margin-top: -5vh;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.stat {
+		float: left;
+		text-align: center;
+		width: 25%;
+		margin-top: 1vh;
+		margin-bottom: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 0.95em;
+	}
+	
+	.graph {
+		width: 100%;
+		position: relative;
+		height: 30vh;
 		display: flex;
 		align-items: flex-end;
 	}
@@ -590,7 +1807,7 @@ li.item, h2 {
 	
 	.label {
 		font-weight: bolder;
-		font-size: 1.2em;
+		font-size: 1em;
 		width: 10vw;
 		margin: 0 1%; 
 		margin-top: 1vh;
@@ -602,16 +1819,20 @@ li.item, h2 {
 	}
 
 	.images {
-		width: 75vw;
-		height: 45vh;
+		width: 70vw;
+		height: 35vh;
 		display: flex;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
+	.awesomplete > ul > li {
+		font-size: 1em;
+	}
+
 	/* Ids */
 	#type-guess {
-		font-size: 1.25em;
+		font-size: 1em;
 	}
 	#image-hint {
 		display: flex;
@@ -619,7 +1840,7 @@ li.item, h2 {
 		margin-top: 2vh;
 		margin-left: auto;
 		margin-right: auto;
-		font-size: 1.5em;
+		font-size: 1.25em;
 		font-weight: 600;
 		text-decoration: underline;
 		width: fit-content;
@@ -652,8 +1873,8 @@ li.item, h2 {
 	#acknowledgements {
 		text-align: right;
 		margin-right: 3vw;
-		margin-top: 1.5vh;
-		font-size: 1em;
+		margin-top: 2vh;
+		font-size: 0.75em;
 	}
 	
 	#labels {
@@ -665,36 +1886,636 @@ li.item, h2 {
 	
 	#identify {
 		text-align: center;
-		font-size: 1.5em;
+		font-size: 1.25em;
 	}
-	
-	li.item, h2 {
+
+	h2 {
 		font-size: 1em;
+		margin-top: -3vh;
 	}
 	
+	li.item {
+		font-size: 0.9em;
+		margin-right: 1vw;
+	}
+		
 	#correct {
 		text-align: center;
-		font-size: 2em;
-		margin-top: -5vh;
-		margin-bottom: -1vh;
+		font-size: 1.5em;
+		margin-top: -4vh;
+		margin-bottom: 1vh;
 	}
 	
 	#correctAnswer {
 		text-align: center;
-		font-size: 1.2em;
+		font-size: 1.25em;
 		margin-top: 1vh;
 	}
 	
 	#wrong {
 		text-align: center;
-		font-size: 1.5em;
-		margin-top: -5vh;
-		margin-bottom: 1.5vh;
+		font-size: 1.25em;
+		margin-top: -4vh;
+		margin-bottom: 1vh;
 	}
 	
 	#wrongAnswer {
 		text-align: center;
+		font-size: 1.25em;
+		margin-top: 1vh;
+	}
+
+	/* Modal box */
+	.modal-content {
+		background-color: #E74054;
+		padding-left: 1.5vw;
+		padding-right: 1vw;
+		margin: 18vh auto;
+		width: 90vw;
+		height: 55vh;
+		color: #D0F4FB;
 		font-size: 1em;
+		font-weight: bold;
+	}
+
+		/* close button */
+	.close {
+		color: #D0F4FB;
+		opacity: 0.65;	
+		position: relative;
+		left: 80vw;
+		font-size: 2em;
+		font-weight: bold;
+	}
+
+		/* Guesses table */
+	#table {
+		overflow-y: auto;
+		height: 80vh;
+		width: 95vw;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: none;
+	}
+
+	.divTableHead {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		height: 5vh;
+		word-wrap: break-word;
+		vertical-align: middle;
+		font-size: 0.75em;
+	}
+
+	.divTableCell {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		word-wrap: break-word;
+		vertical-align: middle;
+		height: 5vh;
+		font-size: 0.75em;
+	}
+
+	#question-mark-content {
+		animation-name: animatetopsmall;
+		animation-duration: 1s;
+	}
+
+	#image-hint-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#image-hint-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+}
+
+@media only screen and (min-width: 375px) {
+	header {
+		width:100%;
+		height:6vh;
+		position: fixed;
+		top:0;
+		background-color: #E74054;
+	}
+	
+	footer {
+		width:100%;
+		height: 8vh;
+		position: fixed;
+		bottom: 0;
+		background-color: #E74054; 
+		color: #D0F4FB;
+	}
+	
+	/* classes */
+	.title {
+		display: flex;
+		justify-content: center;
+		margin-top: 5vh;
+		font-size: 1.5em;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.subtitle {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-size: 1em;
+		margin-top: -5vh;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.stat {
+		float: left;
+		text-align: center;
+		width: 25%;
+		margin-top: 1vh;
+		margin-bottom: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 0.95em;
+	}
+	
+	.graph {
+		width: 100%;
+		position: relative;
+		height: 30vh;
+		display: flex;
+		align-items: flex-end;
+	}
+	
+	.bar {
+		width: 10vw;
+		margin: 0 0.5%;
+		display: inline-block;
+		position: relative;
+		bottom: 0;
+		vertical-align: baseline;
+		text-align: center;
+		background-color: #D0F4FB;
+		color: #E74054;
+		height: 30vh;
+	}
+	
+	.guessNumber {
+		position: relative;
+		display: inline-block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: fit-content;
+		font-weight: bolder;
+		font-size: 1.2em;
+	}
+	
+	.label {
+		font-weight: bolder;
+		font-size: 1em;
+		width: 10vw;
+		margin: 0 1%; 
+		margin-top: 1vh;
+		display: inline-block;
+		position: relative;
+		vertical-align: baseline;
+		text-align: center; 
+		color: #D0F4FB;
+	}
+
+	.images {
+		width: 70vw;
+		height: 35vh;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.awesomplete > ul > li {
+		font-size: 1em;
+	}
+
+	/* Ids */
+	#type-guess {
+		font-size: 1em;
+	}
+	#image-hint {
+		display: flex;
+		justify-content: center;
+		margin-top: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.25em;
+		font-weight: 600;
+		text-decoration: underline;
+		width: fit-content;
+		color: #E74054;
+	}
+
+	#bar-graph {
+		position: relative;
+		left: 20vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#question-mark {
+		position: relative;
+		left: 70vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#guessLabel {
+		margin-bottom: 1vh;
+		margin-top: 1vh;
+		text-align: center;
+		font-size: 1.5em;
+	}
+	
+	#acknowledgements {
+		text-align: right;
+		margin-right: 3vw;
+		margin-top: 2vh;
+		font-size: 0.75em;
+	}
+	
+	#labels {
+		display: flex;
+		position: relative;
+		align-items: flex-end;
+		width: 100%
+	}
+	
+	#identify {
+		text-align: center;
+		font-size: 1.25em;
+	}
+	
+	h2 {
+		font-size: 1em;
+		margin-top: -3vh;
+	}
+	
+	li.item {
+		font-size: 0.9em;
+		margin-right: 1vw;
+	}
+	
+	#correct {
+		text-align: center;
+		font-size: 1.5em;
+		margin-top: -4vh;
+		margin-bottom: 1vh;
+	}
+	
+	#correctAnswer {
+		text-align: center;
+		font-size: 1.25em;
+		margin-top: 1vh;
+	}
+	
+	#wrong {
+		text-align: center;
+		font-size: 1.25em;
+		margin-top: -1vh;
+		margin-bottom: 1vh;
+	}
+	
+	#wrongAnswer {
+		text-align: center;
+		font-size: 1.25em;
+		margin-top: 1vh;
+	}
+
+	/* Modal box */
+	.modal-content {
+		background-color: #E74054;
+		padding-left: 1.5vw;
+		padding-right: 1vw;
+		margin: 18vh auto;
+		width: 90vw;
+		height: 55vh;
+		color: #D0F4FB;
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+		/* close button */
+	.close {
+		color: #D0F4FB;
+		opacity: 0.65;	
+		position: relative;
+		left: 80vw;
+		font-size: 2em;
+		font-weight: bold;
+	}
+
+		/* Guesses table */
+	#table {
+		overflow-y: auto;
+		height: 55vh;
+		width: 95vw;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: none;
+	}
+
+	.divTableHead {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		height: 5vh;
+		word-wrap: break-word;
+		vertical-align: middle;
+		font-size: 0.75em;
+	}
+
+	.divTableCell {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		word-wrap: break-word;
+		vertical-align: middle;
+		height: 5vh;
+		font-size: 0.75em;
+	}
+
+	#question-mark-content {
+		animation-name: animatetopsmall;
+		animation-duration: 1s;
+	}
+
+	#image-hint-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#image-hint-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+}
+
+@media only screen and (height: 667px) {
+	header {
+		width:100%;
+		height:6vh;
+		position: fixed;
+		top:0;
+		background-color: #E74054;
+	}
+	
+	footer {
+		width:100%;
+		height: 8vh;
+		position: fixed;
+		bottom: 0;
+		background-color: #E74054; 
+		color: #D0F4FB;
+	}
+	
+	/* classes */
+	.title {
+		display: flex;
+		justify-content: center;
+		margin-top: 5vh;
+		font-size: 1.5em;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.subtitle {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-size: 1em;
+		margin-top: -5vh;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.stat {
+		float: left;
+		text-align: center;
+		width: 25%;
+		margin-top: 1vh;
+		margin-bottom: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 0.95em;
+	}
+	
+	.graph {
+		width: 100%;
+		position: relative;
+		height: 30vh;
+		display: flex;
+		align-items: flex-end;
+	}
+	
+	.bar {
+		width: 10vw;
+		margin: 0 0.5%;
+		display: inline-block;
+		position: relative;
+		bottom: 0;
+		vertical-align: baseline;
+		text-align: center;
+		background-color: #D0F4FB;
+		color: #E74054;
+		height: 30vh;
+	}
+	
+	.guessNumber {
+		position: relative;
+		display: inline-block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: fit-content;
+		font-weight: bolder;
+		font-size: 1.2em;
+	}
+	
+	.label {
+		font-weight: bolder;
+		font-size: 1em;
+		width: 10vw;
+		margin: 0 1%; 
+		margin-top: 1vh;
+		display: inline-block;
+		position: relative;
+		vertical-align: baseline;
+		text-align: center; 
+		color: #D0F4FB;
+	}
+
+	.images {
+		width: 70vw;
+		height: 35vh;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.awesomplete > ul > li {
+		font-size: 1em;
+	}
+
+	/* Ids */
+	#type-guess {
+		font-size: 1em;
+	}
+	#image-hint {
+		display: flex;
+		justify-content: center;
+		margin-top: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.25em;
+		font-weight: 600;
+		text-decoration: underline;
+		width: fit-content;
+		color: #E74054;
+	}
+
+	#bar-graph {
+		position: relative;
+		left: 20vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#question-mark {
+		position: relative;
+		left: 70vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#guessLabel {
+		margin-bottom: 1vh;
+		margin-top: 1vh;
+		text-align: center;
+		font-size: 1.5em;
+	}
+	
+	#acknowledgements {
+		text-align: right;
+		margin-right: 3vw;
+		margin-top: 2vh;
+		font-size: 0.75em;
+	}
+	
+	#labels {
+		display: flex;
+		position: relative;
+		align-items: flex-end;
+		width: 100%
+	}
+	
+	#identify {
+		text-align: center;
+		font-size: 1.25em;
+	}
+		
+	h2 {
+		font-size: 1em;
+		margin-top: -3vh;
+	}
+	
+	li.item {
+		font-size: 0.9em;
+		margin-right: 1vw;
+	}
+
+	#correct {
+		text-align: center;
+		font-size: 1.5em;
+		margin-top: -4vh;
+		margin-bottom: 1vh;
+	}
+	
+	#correctAnswer {
+		text-align: center;
+		font-size: 1.25em;
+		margin-top: 1vh;
+	}
+	
+	#wrong {
+		text-align: center;
+		font-size: 1.25em;
+		margin-top: -1vh;
+		margin-bottom: 1vh;
+	}
+	
+	#wrongAnswer {
+		text-align: center;
+		font-size: 1.25em;
 		margin-top: 1vh;
 	}
 
@@ -717,7 +2538,7 @@ li.item, h2 {
 		opacity: 0.65;	
 		position: relative;
 		left: 80vw;
-		font-size: 2.5em;
+		font-size: 2em;
 		font-weight: bold;
 	}
 
@@ -790,7 +2611,891 @@ li.item, h2 {
 	}
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 400px) {
+	header {
+		width:100%;
+		height:6vh;
+		position: fixed;
+		top:0;
+		background-color: #E74054;
+	}
+	
+	footer {
+		width:100%;
+		height: 8vh;
+		position: fixed;
+		bottom: 0;
+		background-color: #E74054; 
+		color: #D0F4FB;
+	}
+	
+	/* classes */
+	.title {
+		display: flex;
+		justify-content: center;
+		margin-top: 5vh;
+		font-size: 1.75em;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.subtitle {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-size: 1.25em;
+		margin-top: -5vh;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.stat {
+		float: left;
+		text-align: center;
+		width: 25%;
+		margin-top: 1vh;
+		margin-bottom: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.1em;
+	}
+	
+	.graph {
+		width: 100%;
+		position: relative;
+		height: 30vh;
+		display: flex;
+		align-items: flex-end;
+	}
+	
+	.bar {
+		width: 10vw;
+		margin: 0 0.5%;
+		display: inline-block;
+		position: relative;
+		bottom: 0;
+		vertical-align: baseline;
+		text-align: center;
+		background-color: #D0F4FB;
+		color: #E74054;
+		height: 30vh;
+	}
+	
+	.guessNumber {
+		position: relative;
+		display: inline-block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: fit-content;
+		font-weight: bolder;
+		font-size: 1.2em;
+	}
+	
+	.label {
+		font-weight: bolder;
+		font-size: 1.2em;
+		width: 10vw;
+		margin: 0 1%; 
+		margin-top: 1vh;
+		display: inline-block;
+		position: relative;
+		vertical-align: baseline;
+		text-align: center; 
+		color: #D0F4FB;
+	}
+
+	.images {
+		width: 75vw;
+		height: 40vh;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.awesomplete > ul > li {
+		font-size: 1.25em;
+	}
+
+	/* Ids */
+	#type-guess {
+		font-size: 1.25em;
+	}
+	#image-hint {
+		display: flex;
+		justify-content: center;
+		margin-top: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.5em;
+		font-weight: 600;
+		text-decoration: underline;
+		width: fit-content;
+		color: #E74054;
+	}
+
+	#bar-graph {
+		position: relative;
+		left: 20vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#question-mark {
+		position: relative;
+		left: 70vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#guessLabel {
+		margin-bottom: 1vh;
+		margin-top: 1vh;
+		text-align: center;
+		font-size: 1.5em;
+	}
+	
+	#acknowledgements {
+		text-align: right;
+		margin-right: 3vw;
+		margin-top: 1.5vh;
+		font-size: 1em;
+	}
+	
+	#labels {
+		display: flex;
+		position: relative;
+		align-items: flex-end;
+		width: 100%
+	}
+	
+	#identify {
+		text-align: center;
+		font-size: 1.5em;
+	}
+	
+	h2 {
+		font-size: 1em;
+	}
+
+	li.item {
+		font-size: 1em;
+	}
+	
+	#correct {
+		text-align: center;
+		font-size: 2em;
+		margin-top: -5vh;
+		margin-bottom: -1vh;
+	}
+	
+	#correctAnswer {
+		text-align: center;
+		font-size: 1.25em;
+		margin-top: 1vh;
+	}
+	
+	#wrong {
+		text-align: center;
+		font-size: 1.5em;
+		margin-top: -5vh;
+		margin-bottom: 1.5vh;
+	}
+	
+	#wrongAnswer {
+		text-align: center;
+		font-size: 1.25em;
+		margin-top: 1vh;
+	}
+
+	/* Modal box */
+	.modal-content {
+		background-color: #E74054;
+		padding-left: 1.5vw;
+		padding-right: 1vw;
+		margin: 18vh auto;
+		width: 90vw;
+		height: 55vh;
+		color: #D0F4FB;
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+		/* close button */
+	.close {
+		color: #D0F4FB;
+		opacity: 0.65;	
+		position: relative;
+		left: 80vw;
+		font-size: 2.5em;
+		font-weight: bold;
+	}
+
+		/* Guesses table */
+	#table {
+		overflow-y: auto;
+		height: 52vh;
+		width: 95vw;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: none;
+	}
+
+	.divTableHead {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		height: 7vh;
+		word-wrap: break-word;
+		vertical-align: middle;
+		font-size: 0.75em;
+	}
+
+	.divTableCell {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		word-wrap: break-word;
+		vertical-align: middle;
+		height: 5vh;
+		font-size: 0.75em;
+	}
+
+	#question-mark-content {
+		animation-name: animatetopsmall;
+		animation-duration: 1s;
+	}
+
+	#image-hint-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#image-hint-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+}
+
+@media only screen and (min-width: 480px) {
+	header {
+		width:100%;
+		height:8vh;
+		position: fixed;
+		top:0;
+		background-color: #E74054;
+	}
+	
+	footer {
+		width:100%;
+		height: 8vh;
+		position: fixed;
+		bottom: 0;
+		background-color: #E74054; 
+		color: #D0F4FB;
+	}
+	
+	/* classes */
+	.title {
+		display: flex;
+		justify-content: center;
+		margin-top: 5vh;
+		font-size: 1em;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.subtitle {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-size: 1em;
+		margin-top: -10vh;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.stat {
+		float: left;
+		text-align: center;
+		width: 25%;
+		margin-top: 1vh;
+		margin-bottom: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 0.5em;
+	}
+	
+	.graph {
+		width: 100%;
+		position: relative;
+		height: 50vh;
+		display: flex;
+		align-items: flex-end;
+	}
+	
+	.bar {
+		width: 10vw;
+		margin: 0 0.5%;
+		display: inline-block;
+		position: relative;
+		bottom: 0;
+		vertical-align: baseline;
+		text-align: center;
+		background-color: #D0F4FB;
+		color: #E74054;
+		height: 30vh;
+	}
+	
+	.guessNumber {
+		position: relative;
+		display: inline-block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: fit-content;
+		font-weight: bolder;
+		font-size: 0.5em;
+	}
+	
+	.label {
+		font-weight: bolder;
+		font-size: 0.5em;
+		width: 10vw;
+		margin: 0 1%; 
+		margin-top: 1vh;
+		display: inline-block;
+		position: relative;
+		vertical-align: baseline;
+		text-align: center; 
+		color: #D0F4FB;
+	}
+
+	.images {
+		width: 50vw;
+		height: 50vh;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.awesomplete > ul > li {
+		font-size: 0.75em;
+	}
+
+	/* Ids */
+	#type-guess {
+		font-size: 0.75em;
+	}
+	#image-hint {
+		display: flex;
+		justify-content: center;
+		margin-top: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1em;
+		font-weight: 600;
+		text-decoration: underline;
+		width: fit-content;
+		color: #E74054;
+	}
+
+	#bar-graph {
+		position: relative;
+		left: 20vw;
+		top: 1.5vh;
+		width: fit-content;
+		height: 4vh;
+	}
+	
+	#question-mark {
+		position: relative;
+		left: 75vw;
+		top: 1.5vh;
+		width: fit-content;
+		height: 4vh;
+	}
+	
+	#guessLabel {
+		margin-bottom: 1vh;
+		margin-top: 1vh;
+		text-align: center;
+		font-size: 1em;
+	}
+	
+	#acknowledgements {
+		text-align: right;
+		margin-right: 3vw;
+		margin-top: 1.5vh;
+		font-size: 0.5em;
+	}
+	
+	#labels {
+		display: flex;
+		position: relative;
+		align-items: flex-end;
+		width: 100%
+	}
+	
+	#identify {
+		text-align: center;
+		font-size: 1em;
+	}
+	
+	h2 {
+		font-size: 0.75em;
+	}
+	
+	li.item {
+		font-size: 0.7em;
+	}
+
+	#correct {
+		text-align: center;
+		font-size: 1.5em;
+		margin-top: -5vh;
+		margin-bottom: -1vh;
+	}
+	
+	#correctAnswer {
+		text-align: center;
+		font-size: 1em;
+		margin-top: 1vh;
+	}
+	
+	#wrong {
+		text-align: center;
+		font-size: 1em;
+		margin-top: -5vh;
+		margin-bottom: 1.5vh;
+	}
+	
+	#wrongAnswer {
+		text-align: center;
+		font-size: 1em;
+		margin-top: 1vh;
+	}
+
+	/* Modal box */
+	.modal-content {
+		background-color: #E74054;
+		padding-left: 1.5vw;
+		padding-right: 1vw;
+		margin: 10vh auto;
+		width: 70vw;
+		height: 80vh;
+		color: #D0F4FB;
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+		/* close button */
+	.close {
+		color: #D0F4FB;
+		opacity: 0.65;	
+		position: relative;
+		left: 64vw;
+		font-size: 1.5em;
+		font-weight: bold;
+	}
+
+		/* Guesses table */
+	#table {
+		overflow-y: auto;
+		height: 30vh;
+		width: 95vw;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: none;
+	}
+
+	.divTableHead {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		height: 3vh;
+		word-wrap: break-word;
+		vertical-align: middle;
+		font-size: 0.5em;
+	}
+
+	.divTableCell {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		word-wrap: break-word;
+		vertical-align: middle;
+		height: 3vh;
+		font-size: 0.5em;
+	}
+
+	#question-mark-content {
+		animation-name: animatetopwide;
+		animation-duration: 1s;
+	}
+
+	#image-hint-content-enter {
+		animation-name: enterleftwide;
+		animation-duration: 1s;
+	}
+	
+	#image-hint-content-exit {
+		animation-name: exitrightwide;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-enter {
+		animation-name: enterleftwide;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-exit {
+		animation-name: exitrightwide;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-enter {
+		animation-name: enterleftwide;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-exit {
+		animation-name: exitrightwide;
+		animation-duration: 1s;
+	}
+}
+
+@media only screen and (height: 736px) {
+	header {
+		width:100%;
+		height:6vh;
+		position: fixed;
+		top:0;
+		background-color: #E74054;
+	}
+	
+	footer {
+		width:100%;
+		height: 8vh;
+		position: fixed;
+		bottom: 0;
+		background-color: #E74054; 
+		color: #D0F4FB;
+	}
+	
+	/* classes */
+	.title {
+		display: flex;
+		justify-content: center;
+		margin-top: 5vh;
+		font-size: 1.75em;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.subtitle {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		font-size: 1.25em;
+		margin-top: -5vh;
+		margin-left: auto;
+		margin-right: auto;
+		color: #E74054;
+	}
+
+	.stat {
+		float: left;
+		text-align: center;
+		width: 25%;
+		margin-top: 1vh;
+		margin-bottom: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.1em;
+	}
+	
+	.graph {
+		width: 100%;
+		position: relative;
+		height: 30vh;
+		display: flex;
+		align-items: flex-end;
+	}
+	
+	.bar {
+		width: 10vw;
+		margin: 0 0.5%;
+		display: inline-block;
+		position: relative;
+		bottom: 0;
+		vertical-align: baseline;
+		text-align: center;
+		background-color: #D0F4FB;
+		color: #E74054;
+		height: 30vh;
+	}
+	
+	.guessNumber {
+		position: relative;
+		display: inline-block;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: fit-content;
+		font-weight: bolder;
+		font-size: 1.2em;
+	}
+	
+	.label {
+		font-weight: bolder;
+		font-size: 1.2em;
+		width: 10vw;
+		margin: 0 1%; 
+		margin-top: 1vh;
+		display: inline-block;
+		position: relative;
+		vertical-align: baseline;
+		text-align: center; 
+		color: #D0F4FB;
+	}
+
+	.images {
+		width: 75vw;
+		height: 40vh;
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.awesomplete > ul > li {
+		font-size: 1.25em;
+	}
+
+	/* Ids */
+	#type-guess {
+		font-size: 1.25em;
+	}
+	#image-hint {
+		display: flex;
+		justify-content: center;
+		margin-top: 2vh;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 1.5em;
+		font-weight: 600;
+		text-decoration: underline;
+		width: fit-content;
+		color: #E74054;
+	}
+
+	#bar-graph {
+		position: relative;
+		left: 20vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#question-mark {
+		position: relative;
+		left: 70vw;
+		top: 1.3vh;
+		width: fit-content;
+		height: 3vh;
+	}
+	
+	#guessLabel {
+		margin-bottom: 1vh;
+		margin-top: 1vh;
+		text-align: center;
+		font-size: 1.5em;
+	}
+	
+	#acknowledgements {
+		text-align: right;
+		margin-right: 3vw;
+		margin-top: 2vh;
+		font-size: 0.75em;
+	}
+	
+	#labels {
+		display: flex;
+		position: relative;
+		align-items: flex-end;
+		width: 100%
+	}
+	
+	#identify {
+		text-align: center;
+		font-size: 1.5em;
+	}
+	
+	h2 {
+		font-size: 1em;
+	}
+
+	li.item {
+		font-size: 1em;
+	}
+	
+	#correct {
+		text-align: center;
+		font-size: 2em;
+		margin-top: -5vh;
+		margin-bottom: -1vh;
+	}
+	
+	#correctAnswer {
+		text-align: center;
+		font-size: 1.25em;
+		margin-top: 1vh;
+	}
+	
+	#wrong {
+		text-align: center;
+		font-size: 1.5em;
+		margin-top: -5vh;
+		margin-bottom: 1.5vh;
+	}
+	
+	#wrongAnswer {
+		text-align: center;
+		font-size: 1.25em;
+		margin-top: 1vh;
+	}
+
+	/* Modal box */
+	.modal-content {
+		background-color: #E74054;
+		padding-left: 1.5vw;
+		padding-right: 1vw;
+		margin: 18vh auto;
+		width: 90vw;
+		height: 60vh;
+		color: #D0F4FB;
+		font-size: 1em;
+		font-weight: bold;
+	}
+
+		/* close button */
+	.close {
+		color: #D0F4FB;
+		opacity: 0.65;	
+		position: relative;
+		left: 80vw;
+		font-size: 2.5em;
+		font-weight: bold;
+	}
+
+		/* Guesses table */
+	#table {
+		overflow-y: auto;
+		height: 45vh;
+		width: 95vw;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		display: none;
+	}
+
+	.divTableHead {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		height: 7vh;
+		word-wrap: break-word;
+		vertical-align: middle;
+		font-size: 0.75em;
+	}
+
+	.divTableCell {
+		display: table-cell;
+		padding: 3px 10px;
+		border: solid 0.0625em grey;
+		width: 25vw;
+		word-wrap: break-word;
+		vertical-align: middle;
+		height: 5vh;
+		font-size: 0.75em;
+	}
+
+	#question-mark-content {
+		animation-name: animatetopsmall;
+		animation-duration: 1s;
+	}
+
+	#image-hint-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#image-hint-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#wrong-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-enter {
+		animation-name: enterleftsmall;
+		animation-duration: 1s;
+	}
+	
+	#correct-content-exit {
+		animation-name: exitrightsmall;
+		animation-duration: 1s;
+	}
+}
+
 @media only screen and (min-width: 600px) {
 	header {
 		width:100%;
@@ -897,6 +3602,10 @@ li.item, h2 {
 		margin-right: auto;
 	}
 
+	.awesomplete > ul > li {
+		font-size: 1.25em;
+	}
+
 	/* Ids */
 	#type-guess {
 		font-size: 1.25em;
@@ -956,7 +3665,11 @@ li.item, h2 {
 		font-size: 2em;
 	}
 	
-	li.item, h2 {
+	h2 {
+		font-size: 1.25em;
+	}
+
+	li.item {
 		font-size: 1.25em;
 	}
 	
@@ -1041,7 +3754,7 @@ li.item, h2 {
 	}
 
 	#question-mark-content {
-		animation-name: animatetopsmall;
+		animation-name: animatetop;
 		animation-duration: 1s;
 	}
 
@@ -1076,7 +3789,6 @@ li.item, h2 {
 	}
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 	header {
 		width:100%;
@@ -1131,7 +3843,7 @@ li.item, h2 {
 	.graph {
 		width: 100%;
 		position: relative;
-		height: 45vh;
+		height: 50vh;
 		display: flex;
 		align-items: flex-end;
 	}
@@ -1183,6 +3895,10 @@ li.item, h2 {
 		margin-right: auto;
 	}
 
+	.awesomplete > ul > li {
+		font-size: 1.5em;
+	}
+
 	/* Ids */
 	#type-guess {
 		font-size: 1.5em;
@@ -1220,14 +3936,14 @@ li.item, h2 {
 		margin-bottom: 1vh;
 		margin-top: 1vh;
 		text-align: center;
-		font-size: 1.5em;
+		font-size: 2em;
 	}
 	
 	#acknowledgements {
 		text-align: right;
 		margin-right: 3vw;
 		margin-top: 1.5vh;
-		font-size: 1em;
+		font-size: 1.25em;
 	}
 	
 	#labels {
@@ -1242,8 +3958,12 @@ li.item, h2 {
 		font-size: 2em;
 	}
 	
-	li.item, h2 {
-		font-size: 1.5em;
+	h2 {
+		font-size: 2em;
+	}
+
+	li.item {
+		font-size: 2em;
 	}
 	
 	#correct {
@@ -1327,7 +4047,7 @@ li.item, h2 {
 	}
 
 	#question-mark-content {
-		animation-name: animatetopsmall;
+		animation-name: animatetop;
 		animation-duration: 1s;
 	}
 
@@ -1362,11 +4082,10 @@ li.item, h2 {
 	}
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	header {
 		width:100%;
-		height:6vh;
+		height:8vh;
 		position: fixed;
 		top:0;
 		background-color: #E74054;
@@ -1417,7 +4136,7 @@ li.item, h2 {
 	.graph {
 		width: 100%;
 		position: relative;
-		height: 50vh;
+		height: 40vh;
 		display: flex;
 		align-items: flex-end;
 	}
@@ -1469,6 +4188,10 @@ li.item, h2 {
 		margin-right: auto;
 	}
 
+	.awesomplete > ul > li {
+		font-size: 1.5em;
+	}
+
 	/* Ids */
 	#type-guess {
 		font-size: 1.5em;
@@ -1491,7 +4214,7 @@ li.item, h2 {
 		left: 25vw;
 		top: 1.3vh;
 		width: fit-content;
-		height: 3vh;
+		height: 5vh;
 	}
 	
 	#question-mark {
@@ -1499,7 +4222,7 @@ li.item, h2 {
 		left: 70vw;
 		top: 1.3vh;
 		width: fit-content;
-		height: 3vh;
+		height: 5vh;
 	}
 	
 	#guessLabel {
@@ -1528,7 +4251,11 @@ li.item, h2 {
 		font-size: 2em;
 	}
 	
-	li.item, h2 {
+	h2 {
+		font-size: 1.5em;
+	}
+
+	li.item {
 		font-size: 1.5em;
 	}
 	
@@ -1613,7 +4340,7 @@ li.item, h2 {
 	}
 
 	#question-mark-content {
-		animation-name: animatetopsmall;
+		animation-name: animatetopwide;
 		animation-duration: 1s;
 	}
 
@@ -1648,7 +4375,6 @@ li.item, h2 {
 	}
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 	header {
 		width:100%;
@@ -1755,6 +4481,10 @@ li.item, h2 {
 		margin-right: auto;
 	}
 
+	.awesomplete > ul > li {
+		font-size: 1.75em;
+	}
+
 	/* Ids */
 	#type-guess {
 		font-size: 1.75em;
@@ -1814,8 +4544,12 @@ li.item, h2 {
 		font-size: 2.5em;
 		margin-bottom: 1vh;
 	}
+
+	h2 {
+		font-size: 1.75em;
+	}
 	
-	li.item, h2 {
+	li.item {
 		font-size: 1.75em;
 	}
 	
@@ -1936,7 +4670,6 @@ li.item, h2 {
 	}
 }
 
-/* Extra wide large devices (wide screens 1900px and up) */
 @media only screen and (min-width: 1900px) {
 	header {
 		width:100%;
@@ -2043,6 +4776,10 @@ li.item, h2 {
 		margin-right: auto;
 	}
 
+	.awesomplete > ul > li {
+		font-size: 1.75em;
+	}
+
 	/* Ids */
 	#type-guess {
 		font-size: 1.75em;
@@ -2102,16 +4839,17 @@ li.item, h2 {
 		font-size: 3em;
 		margin-top: -0.5vh;
 	}
-	
-	li.item {
-		font-size: 2em;
-	}
 
+	
 	h2 {
 		margin-top: -2vh;
 		font-size: 3em;
 	}
-	
+		
+	li.item {
+		font-size: 2em;
+	}
+
 	#correct {
 		text-align: center;
 		font-size: 4em;

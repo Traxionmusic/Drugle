@@ -51,7 +51,6 @@
 		padding: .2em .5em;
 		cursor: pointer;
 		border-bottom: 1px solid #E74054;
-		font-size: 125%;
 	}
 
 	.awesomplete > ul > li:hover {
