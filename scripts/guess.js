@@ -233,6 +233,7 @@ function checkGuess() {
         tableCounter++;
         localStorage.setItem('tableCounter',tableCounter);
     };
+    localStorage.setItem('table', JSON.stringify(document.getElementById('table').innerHTML));
     }
 
 /* enter to select */ guessArea.addEventListener("keydown", (e) => {

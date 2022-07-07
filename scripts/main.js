@@ -142,10 +142,7 @@ window.onclick = function(event) {
 	}
 };
 
-// save progress
-window.onbeforeunload = function() {
-	localStorage.setItem('table', JSON.stringify(document.getElementById('table').innerHTML));
-};
+// Return progres
 if (JSON.parse(localStorage.getItem('tableCounter')) > 0) {
 	document.getElementById('table').innerHTML = JSON.parse(localStorage.getItem('table'));
 	document.getElementById("table").style.display = "block";
