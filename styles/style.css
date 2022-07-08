@@ -54,17 +54,12 @@ a:hover {
 .title {
 	display: flex;
 	justify-content: center;
-	margin-left: auto;
-	margin-right: auto;
 	color: #E74054;
 }
 
 .subtitle {
 	display: flex;
 	justify-content: center;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
 	color: #E74054;
 }
 
@@ -79,7 +74,6 @@ input:disabled {
 
 #image-hint {
 	display: flex;
-	justify-content: center;
 	margin-left: auto;
 	margin-right: auto;
 	font-weight: bolder;
@@ -104,24 +98,21 @@ input:disabled {
 	width: 100%;
 	height: 100%;
 	overflow: auto;
-	background-color: rgb(0,0,0);
 	background-color: rgba(0,0,0,0.4);
 }
 
 .modal-content {
 	background-color: #E74054;
 	padding-left: 1.5vw;
-	padding-right: 1vw;
+	padding-right: 1.5vw;
 	margin: 10vh auto;
 	color: #D0F4FB;
 	font-weight: bold;
 }
 
 .close {
-	color: #D0F4FB;
 	opacity: 0.65;	
 	position: relative;
-	font-weight: bold;
 }
 
 .close:hover, .close:focus {
@@ -143,8 +134,6 @@ input:disabled {
 	float: left;
 	text-align: center;
 	width: 25%;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .graph {
@@ -169,7 +158,6 @@ input:disabled {
 }
 
 .guessNumber {
-	position: relative;
 	display: inline-block;
 	top: 0;
 	bottom: 0;
@@ -271,8 +259,8 @@ input:disabled {
 
 .divTableHead {
 	display: table-cell;
-	padding: 3px 10px;
-	border: solid 0.0625em grey;
+	padding: 0.5vw 1vh;
+	border: solid 0.05rem grey;
 	width: 25vw;
 	word-wrap: break-word;
 	vertical-align: middle;
@@ -304,8 +292,8 @@ input:disabled {
 
 .divTableCell {
 	display: table-cell;
-	padding: 3px 10px;
-	border: solid 0.0625em grey;
+	padding: 0.5vw 1vh;
+	border: solid 0.05rem grey;
 	width: 25vw;
 	word-wrap: break-word;
 	vertical-align: middle;
@@ -430,7 +418,7 @@ input:disabled {
 	}
 }
 
- /* 576 */
+ /* normal */
  @-webkit-keyframes enterleft {
 	from {
 		margin-left: -100%;
@@ -504,8 +492,7 @@ footer {
 
 /* Main Screen */
 .title {
-	font-size: 1rem;
-	margin-top: 1.5vh;
+	font-size: 1.5rem;
 }
 
 .subtitle {
@@ -596,7 +583,7 @@ footer {
 
 .list {
 	font-size: 1rem;
-	margin-top: -1	vh;
+	margin-top: -1vh;
 	padding-right: 2.5vw;
 }
 
@@ -641,12 +628,12 @@ footer {
 
 .divTableHead {
 	height: 5vh;
-	font-size: 0.75rem;
+	font-size: 0.5rem;
 }
 
 .divTableCell {
 	height: 2.5vh;
-	font-size: 0.75rem;
+	font-size: 0.5rem;
 }
 
 /* Small devices (landscape phones, 576px and up) */
