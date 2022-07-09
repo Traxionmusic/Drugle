@@ -1350,39 +1350,39 @@ input:disabled {
 	}
 
 	#acknowledgements {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		margin-top: 1.75vh;
 		margin-right: 1.5vw;
 	}
 
 	/* Main Screen */
 	.title {
-		font-size: 4rem;
+		font-size: 3rem;
 		margin-top: -2vh;
 	}
 
 	.subtitle {
-		font-size: 2.5rem;
+		font-size: 2rem;
 		margin-top: -10vh;
 		margin-bottom: -1vh;
 	}
 
 	#type-guess,
 	.awesomplete > ul > li {
-		font-size: 2.5rem;
+		font-size: 1.5rem;
 	}
 
 	.awesomplete > ul {
-		max-height: 60vh;
+		max-height: 50vh;
 	}
 	
 	#image-hint {
-		font-size: 3rem;
+		font-size: 2rem;
 	}
 
 	/* General Modal Specs */
 	.modal-content {
-		height: 75vh;
+		height: 80vh;
 		width: 75vw;
 	}
 
@@ -1411,16 +1411,16 @@ input:disabled {
 
 	/* Bar Graph Modal (stats) */
 	.stat {	
-		font-size: 2.5rem;
+		font-size: 2rem;
 		margin-bottom: 3vh;
 	}
 
 	.graph {
-		height: 40vh;
+		height: 42vh;
 	}
 
 	.guessNumber, .label {
-		font-size: 2.5rem;
+		font-size: 2rem;
 	}
 
 	.label {
@@ -1428,7 +1428,7 @@ input:disabled {
 	}
 
 	#guessLabel {
-		font-size: 4rem;
+		font-size: 3rem;
 		margin-top: 1vh;
 		margin-bottom: 2vh;
 	}
@@ -1442,14 +1442,194 @@ input:disabled {
 	}
 
 	#instruction-title {
-		font-size: 4rem;
-		margin-top: -3vh;
+		font-size: 3rem;
+		margin-top: -7vh;
 	}
 
 	.list {
+		font-size: 2rem;
+		margin-top: -3vh;
+		padding-right: 3vw;
+	}
+
+	/* Image Hint Modal (hint, correct, wrong) */
+	.images {
+		height: 50vh;
+		width: 30vw;
+	}
+		
+	#identify {
+		font-size: 3rem;
+		margin-top: 0vh;
+		margin-bottom: -5vh;
+	}
+
+	#correct {
+		font-size: 5rem;
+		margin-top: -5vh;
+	}
+	
+	#correctAnswer {
+		font-size: 2rem;
+		margin-top: 1vh;
+	}
+	
+	#wrong {
+		font-size: 3rem;
+		margin-top: -4vh;
+		margin-bottom: 2vh;
+	}
+	
+	#wrongAnswer {
+		font-size: 2rem;
+		margin-top: 1vh;
+	}
+
+	/* Table */
+	#table {
+		height: 45vh;
+		width: 95vw;
+	}
+
+	.divTableHead {
+		height: 5vh;
+		font-size: 1rem;
+	}
+
+	.divTableCell {
+		height: 5vh;
+		font-size: 1rem;
+	}
+}
+
+/* Extra extra large devices (2256px and up) */
+@media only screen and (min-width: 2256px) {
+	/* Header */
+	header {
+		height:6vh;
+	}
+	
+	#bar-graph, #question-mark {
+		top: 0.5vh;
+		width: 4vh;
+		height: 4vh;
+	}
+
+	#bar-graph {
+		left: 25vw;
+	}
+	
+	#question-mark {	
+		left: 68.25vw;
+	}
+
+	/* Footer */
+	footer {
+		height: 8vh;
+	}
+
+	#acknowledgements {
 		font-size: 2.5rem;
+		margin-top: 1.75vh;
+		margin-right: 1.5vw;
+	}
+
+	/* Main Screen */
+	.title {
+		font-size: 7rem;
+		margin-top: -2vh;
+	}
+
+	.subtitle {
+		font-size: 3.5rem;
+		margin-top: -8vh;
+		margin-bottom: -1vh;
+	}
+
+	#type-guess,
+	.awesomplete > ul > li {
+		font-size: 3rem;
+	}
+
+	.awesomplete > ul {
+		max-height: 55vh;
+	}
+	
+	#image-hint {
+		font-size: 4em;
+	}
+
+	/* General Modal Specs */
+	.modal-content {
+		height: 75vh;
+		width: 75vw;
+	}
+
+	.close {
+		font-size: 5rem;
+		left: 71vw;
+	}
+
+	#image-hint-content-enter,
+	#wrong-content-enter,
+	#correct-content-enter {
+		        -webkit-animation-name: enterleft;
+		                animation-name: enterleft;
+		        -webkit-animation-duration: 1s;
+		                animation-duration: 1s;
+	}
+	
+	#image-hint-content-exit,
+	#wrong-content-exit,
+	#correct-content-exit {
+		        -webkit-animation-name: exitright;
+		                animation-name: exitright;
+		        -webkit-animation-duration: 1s;
+		                animation-duration: 1s;
+	}
+
+	/* Bar Graph Modal (stats) */
+	.stat {	
+		font-size: 5rem;
+		margin-bottom: 3vh;
+	}
+
+	.graph {
+		height: 40vh;
+	}
+
+	.guessNumber, .label {
+		font-size: 4rem;
+	}
+
+	.label {
+		margin-top: 1vh;
+	}
+
+	#guessLabel {
+		font-size: 7rem;
+		margin-top: 1vh;
+		margin-bottom: 2vh;
+	}
+	
+	/* Question Mark Modal (instructions) */
+	#question-mark-content {
+		-webkit-animation-name: animatetop;
+		        animation-name: animatetop;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
+	}
+
+	#instruction-title {
+		font-size: 8rem;
+		margin-top: -2vh;
+	}
+
+	.list {
+		font-size: 4.5rem;
 		margin-top: -2vh;
 		padding-right: 3vw;
+		padding-left: 2vw;
 	}
 
 	/* Image Hint Modal (hint, correct, wrong) */
@@ -1459,29 +1639,29 @@ input:disabled {
 	}
 		
 	#identify {
-		font-size: 4rem;
+		font-size: 8rem;
 		margin-top: 5vh;
 	}
 
 	#correct {
-		font-size: 5rem;
-		margin-top: -5vh;
+		font-size: 10rem;
+		margin-top: -3vh;
 		margin-bottom: 0vh;
 	}
 	
 	#correctAnswer {
-		font-size: 2.5rem;
+		font-size: 5rem;
 		margin-top: 1vh;
 	}
 	
 	#wrong {
-		font-size: 3.5rem;
+		font-size: 7rem;
 		margin-top: -3vh;
 		margin-bottom: 1.5vh;
 	}
 	
 	#wrongAnswer {
-		font-size: 2.5rem;
+		font-size: 5rem;
 		margin-top: 1vh;
 	}
 
@@ -1493,11 +1673,11 @@ input:disabled {
 
 	.divTableHead {
 		height: 7vh;
-		font-size: 2rem;
+		font-size: 3.5rem;
 	}
 
 	.divTableCell {
 		height: 5vh;
-		font-size: 1.75rem;
+		font-size: 3rem;
 	}
 }
