@@ -21,10 +21,7 @@ header {
 	background-color: #E74054;
 }
 
-#bar-graph {
-	position: relative;
-}
-
+#bar-graph,
 #question-mark {
 	position: relative;
 }
@@ -51,12 +48,7 @@ a:hover {
 }
 
 /* Main Screen */
-.title {
-	display: flex;
-	justify-content: center;
-	color: #E74054;
-}
-
+.title,
 .subtitle {
 	display: flex;
 	justify-content: center;
@@ -84,7 +76,8 @@ input:disabled {
 	color: #E74054;
 }
 
-#image-hint:hover, #image-hint:focus {
+#image-hint:hover,
+#image-hint:focus {
 	cursor: pointer;
 }
 
@@ -108,6 +101,7 @@ input:disabled {
 	margin: 10vh auto;
 	color: #D0F4FB;
 	font-weight: bold;
+	overflow:auto;
 }
 
 .close {
@@ -115,7 +109,8 @@ input:disabled {
 	position: relative;
 }
 
-.close:hover, .close:focus {
+.close:hover,
+.close:focus {
 	color: #D0F4FB;
 	opacity: 100%;
 	text-decoration: none;
@@ -224,22 +219,10 @@ input:disabled {
 	margin-right: auto;
 }
 
-#identify {
-	text-align: center;
-}
-
-#correct {
-	text-align: center;
-}
-
-#correctAnswer {
-	text-align: center;
-}
-
-#wrong {
-	text-align: center;
-}
-
+#identify,
+#correct,
+#correctAnswer,
+#wrong,
 #wrongAnswer {
 	text-align: center;
 }
@@ -339,7 +322,6 @@ input:disabled {
 		color: black;
 	}
 }
-
 @keyframes colorchange {
 	0% {
 		border-color: #D0F4FB;
@@ -361,7 +343,6 @@ input:disabled {
 	 margin-top: 10vh;
    }
  }
-
 @keyframes animatetop {
 	0% {
 	 margin-top: -100%;
@@ -400,7 +381,6 @@ input:disabled {
 		margin-left: 100%;
 	}
 }
-
 @keyframes exitrightsmall {
 	from {
 		margin-left: 10vw;
@@ -440,7 +420,6 @@ input:disabled {
 		margin-left: 100%;
 	}
 }
-
 @keyframes exitright {
 	from {
 		margin-left: 12.5vw;
@@ -452,15 +431,196 @@ input:disabled {
 }
 
 /* Responsiveness */
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 599.98px) {
+/* Weird width (under 400px) */
+@media only screen and (max-width: 399.98px) {
 	/* Header */
 	header {
 		height:3vh;
 	}
 
-	#bar-graph, #question-mark {
-		top: 0.5vh;
+	#bar-graph,
+	#question-mark {
+		margin-top: 0.5vh;
+		width: 2vh;
+		height: 2vh;
+	}
+
+	#bar-graph {
+		left: 25vw;
+	}
+
+	#question-mark {
+		left: 65vw;
+	}
+
+	/* Footer */
+	footer {
+		height: 5vh;
+	}
+
+	#acknowledgements {
+		font-size: 0.5rem;
+		margin-top: 0.75vh;
+		margin-right: 1.5vw;
+	}
+
+	/* Main Screen */
+	.title {
+		font-size: 1.25rem;
+	}
+
+	.subtitle {
+		font-size: 0.9rem;
+		margin-top: -4vh;
+	}
+
+	#type-guess,
+	.awesomplete > ul > li {
+		font-size: 1rem;
+	}
+
+	.awesomplete > ul {
+		max-height: 70vh;
+	}
+
+	#image-hint {
+		font-size: 1.25rem;
+		margin-top: 1vh;
+	}
+
+	/* General Modal Specs */
+	.modal-content {	
+		height: 75%;
+		width: 80vw;
+	}
+
+	.close {
+		font-size: 2rem;
+		left: 71vw;
+	}
+
+	#image-hint-content-enter,
+	#wrong-content-enter,
+	#correct-content-enter {
+				-webkit-animation-name: enterleftsmall;
+						animation-name: enterleftsmall;
+				-webkit-animation-duration: 1s;
+						animation-duration: 1s;
+	}
+
+	#image-hint-content-exit,
+	#wrong-content-exit,
+	#correct-content-exit {
+				-webkit-animation-name: exitrightsmall;
+						animation-name: exitrightsmall;
+				-webkit-animation-duration: 1s;
+						animation-duration: 1s;
+	}
+
+	/* Bar Graph Modal (stats) */
+	.stat {	
+		font-size: 0.8rem;
+		margin-bottom: 2.5vh;
+	}
+
+	.graph {
+		height: 50vh;
+	}
+
+	.guessNumber, .label {
+		font-size: 1rem;
+	}
+
+	.label {
+		margin-top: 1vh;
+	}
+
+	#guessLabel {
+		font-size: 1.25rem;
+		margin-top: 1vh;
+		margin-bottom: 1vh;
+	}
+
+	/* Question Mark Modal (instructions) */
+	#question-mark-content {
+		-webkit-animation-name: animatetop;
+				animation-name: animatetop;
+		-webkit-animation-duration: 1s;
+				animation-duration: 1s;
+	}
+
+	#instruction-title {
+		font-size: 1.5rem;
+		margin-top: -0.5vh;
+		padding-right: 2vw
+	}
+
+	.list {
+		font-size: 1rem;
+		margin-top: -1vh;
+		padding-right: 2.5vw;
+	}
+
+	/* Image Hint Modal (hint, correct, wrong) */
+	.images {
+		height: 40vh;
+		width: 70vw;
+	}
+		
+	#identify {
+		font-size: 1.75rem;
+		margin-top: 5vh;
+	}
+
+	#correct {
+		font-size: 3rem;
+		margin-top: -2vh;
+		margin-bottom: 0vh;
+	}
+
+	#correctAnswer {
+		font-size: 1.25rem;
+		margin-top: 2vh;
+	}
+
+	#wrong {
+		font-size: 1.5rem;
+		margin-top: -1.5vh;
+		margin-bottom: 1.5vh;
+	}
+
+	#wrongAnswer {
+		font-size: 1.25rem;
+		margin-top: 2vh;
+	}
+
+	/* Table */
+	#table {
+		height: 65vh;
+		width: 95vw;
+	}
+
+	.divTableHead {
+		height: 5vh;
+		font-size: 0.75rem;
+	}
+
+	.divTableCell {
+		height: 2.5vh;
+		font-size: 0.75rem;
+	}
+}
+
+/* Extra small devices (phones, 400px and up) */
+@media only screen and (min-width: 400px) {
+	/* Header */
+	header {
+		height:3vh;
+	}
+
+	#bar-graph,
+	#question-mark {
+		margin-top: 0.5vh;
 		width: 2vh;
 		height: 2vh;
 	}
@@ -496,15 +656,15 @@ input:disabled {
 
 	#type-guess,
 	.awesomplete > ul > li {
-		font-size: 0.75rem;
+		font-size: 1rem;
 	}
 
 	.awesomplete > ul {
-		max-height: 80vh;
+		max-height: 75vh;
 	}
 
 	#image-hint {
-		font-size: 1rem;
+		font-size: 1.5rem;
 		margin-top: 1vh;
 	}
 
@@ -515,8 +675,8 @@ input:disabled {
 	}
 
 	.close {
-		font-size: 1.5rem;
-		left: 73vw;
+		font-size: 2.5rem;
+		left: 70vw;
 	}
 
 	#image-hint-content-enter,
@@ -539,7 +699,7 @@ input:disabled {
 
 	/* Bar Graph Modal (stats) */
 	.stat {	
-		font-size: 0.9rem;
+		font-size: 1rem;
 		margin-bottom: 2.5vh;
 	}
 
@@ -548,7 +708,7 @@ input:disabled {
 	}
 
 	.guessNumber, .label {
-		font-size: 1rem;
+		font-size: 1.25rem;
 	}
 
 	.label {
@@ -570,7 +730,7 @@ input:disabled {
 	}
 
 	#instruction-title {
-		font-size: 1.25rem;
+		font-size: 2rem;
 		margin-top: -0.5vh;
 		padding-right: 2vw
 	}
@@ -605,7 +765,7 @@ input:disabled {
 
 	#wrong {
 		font-size: 1.5rem;
-		margin-top: -1vh;
+		margin-top: -2vh;
 		margin-bottom: 1.5vh;
 	}
 
@@ -616,18 +776,18 @@ input:disabled {
 
 	/* Table */
 	#table {
-		height: 68vh;
+		height: 65vh;
 		width: 95vw;
 	}
 
 	.divTableHead {
 		height: 5vh;
-		font-size: 0.5rem;
+		font-size: 0.75rem;
 	}
 
 	.divTableCell {
 		height: 2.5vh;
-		font-size: 0.5rem;
+		font-size: 0.75rem;
 	}
 }
 
@@ -635,13 +795,13 @@ input:disabled {
 @media only screen and (min-width: 600px) {
 	/* Header */
 	header {
-		height:6vh;
+		height:5vh;
 	}
 	
 	#bar-graph, #question-mark {
-		top: 1vh;
-		width: 4vh;
-		height: 4vh;
+		top: 0.5vh;
+		width: 3vh;
+		height: 3vh;
 	}
 
 	#bar-graph {
@@ -654,38 +814,36 @@ input:disabled {
 
 	/* Footer */
 	footer {
-		height: 10vh;
+		height: 7vh;
 	}
 
 	#acknowledgements {
 		font-size: 1rem;
-		margin-top: 2.5vh;
+		margin-top: 2vh;
 		margin-right: 2vw;
 	}
 
 	/* Main Screen */
 	.title {
-		font-size: 2rem;
-		margin-top: 3vh;
+		font-size: 3rem;
 	}
 
 	.subtitle {
-		font-size: 1.5rem;
-		margin-top: -6vh;
+		font-size: 2rem;
+		margin-top: -8vh;
 	}
 
 	#type-guess,
 	.awesomplete > ul > li {
-		font-size: 1.25rem;
+		font-size: 2rem;
 	}
 
 	.awesomplete > ul {
-		max-height: 50vh;
+		max-height: 60vh;
 	}
 	
 	#image-hint {
-		font-size: 1.5rem;
-		margin-top: 2vh;
+		font-size: 2.5rem;
 	}
 
 	/* General Modal Specs */
@@ -695,7 +853,184 @@ input:disabled {
 	}
 
 	.close {
+		font-size: 3rem;
+		left: 67vw;
+	}
+
+	#image-hint-content-enter,
+	#wrong-content-enter,
+	#correct-content-enter {
+		        -webkit-animation-name: enterleft;
+		                animation-name: enterleft;
+		        -webkit-animation-duration: 1s;
+		                animation-duration: 1s;
+	}
+	
+	#image-hint-content-exit,
+	#wrong-content-exit,
+	#correct-content-exit {
+		        -webkit-animation-name: exitright;
+		                animation-name: exitright;
+		        -webkit-animation-duration: 1s;
+		                animation-duration: 1s;
+	}
+
+	/* Bar Graph Modal (stats) */
+	.stat {	
+		font-size: 1.5rem;
+		margin-bottom: 5vh;
+	}
+
+	.graph {
+		height: 45vh;
+	}
+
+	.guessNumber, .label {
+		font-size: 1.5rem;
+	}
+
+	.label {
+		margin-top: 1vh;
+	}
+
+	#guessLabel {
 		font-size: 2rem;
+		margin-top: 1vh;
+		margin-bottom: 1vh;
+	}
+	
+	/* Question Mark Modal (instructions) */
+	#question-mark-content {
+		-webkit-animation-name: animatetop;
+		        animation-name: animatetop;
+		-webkit-animation-duration: 1s;
+		        animation-duration: 1s;
+	}
+
+	#instruction-title {
+		font-size: 3rem;
+	}
+
+	.list {
+		font-size: 1.5rem;
+		padding-right: 2.5vw;
+	}
+
+	/* Image Hint Modal (hint, correct, wrong) */
+	.images {
+		height: 50vh;
+		width: 70vw;
+	}
+		
+	#identify {
+		font-size: 3rem;
+		margin-top: 5vh;
+	}
+
+	#correct {
+		font-size: 5rem;
+		margin-top: -2vh;
+		margin-bottom: 0vh;
+	}
+	
+	#correctAnswer {
+		font-size: 1.5rem;
+		margin-top: 2vh;
+	}
+	
+	#wrong {
+		font-size: 2.5rem;
+		margin-top: -1vh;
+		margin-bottom: 1vh;
+	}
+	
+	#wrongAnswer {
+		font-size: 1.75rem;
+		margin-top: 2vh;
+	}
+
+	/* Table */
+	#table {
+		height: 50vh;
+		width: 95vw;
+	}
+
+	.divTableHead {
+		height: 7vh;
+		font-size: 1.25rem;
+	}
+
+	.divTableCell {
+		height: 5vh;
+		font-size: 1.25rem;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	/* Header */
+	header {
+		height:5vh;
+	}
+	
+	#bar-graph, #question-mark {
+		top: 0.5vh;
+		width: 3vh;
+		height: 3vh;
+	}
+
+	#bar-graph {
+		left: 25vw;
+	}
+	
+	#question-mark {	
+		left: 66.5vw;
+	}
+
+	/* Footer */
+	footer {
+		height: 7vh;
+	}
+
+	#acknowledgements {
+		font-size: 1rem;
+		margin-top: 2vh;
+		margin-right: 2vw;
+	}
+
+	/* Main Screen */
+	.title {
+		font-size: 2rem;
+		margin-top: 1vh;
+	}
+
+	.subtitle {
+		font-size: 1.5rem;
+		margin-top: -6vh;
+	}
+
+	#type-guess,
+	.awesomplete > ul > li {
+		font-size: 1.5rem;
+	}
+
+	.awesomplete > ul {
+		max-height: 65vh;
+	}
+	
+	#image-hint {
+		font-size: 2rem;
+		margin-top: 1vh;
+	}
+
+	/* General Modal Specs */
+	.modal-content {
+		height: 75vh;
+		width: 75vw;
+	}
+
+	.close {
+		font-size: 3rem;
 		left: 68vw;
 	}
 
@@ -719,7 +1054,7 @@ input:disabled {
 
 	/* Bar Graph Modal (stats) */
 	.stat {	
-		font-size: 1.25rem;
+		font-size: 1.5rem;
 		margin-bottom: 5vh;
 	}
 
@@ -728,7 +1063,7 @@ input:disabled {
 	}
 
 	.guessNumber, .label {
-		font-size: 1.25rem;
+		font-size: 1.5rem;
 	}
 
 	.label {
@@ -736,7 +1071,7 @@ input:disabled {
 	}
 
 	#guessLabel {
-		font-size: 1.75rem;
+		font-size: 2rem;
 		margin-top: 1vh;
 		margin-bottom: 1vh;
 	}
@@ -751,190 +1086,10 @@ input:disabled {
 
 	#instruction-title {
 		font-size: 2.5rem;
-		margin-top: -3vh;
 	}
 
 	.list {
-		font-size: 1.2rem;
-		margin-top: -3vh;
-		padding-right: 2.5vw;
-	}
-
-	/* Image Hint Modal (hint, correct, wrong) */
-	.images {
-		height: 50vh;
-		width: 70vw;
-	}
-		
-	#identify {
-		font-size: 1.75rem;
-		margin-top: 5vh;
-	}
-
-	#correct {
-		font-size: 3rem;
-		margin-top: -2vh;
-		margin-bottom: 0vh;
-	}
-	
-	#correctAnswer {
 		font-size: 1.5rem;
-		margin-top: 2vh;
-	}
-	
-	#wrong {
-		font-size: 1.5rem;
-		margin-top: -1vh;
-		margin-bottom: 1.5vh;
-	}
-	
-	#wrongAnswer {
-		font-size: 1.5rem;
-		margin-top: 2vh;
-	}
-
-	/* Table */
-	#table {
-		height: 43vh;
-		width: 95vw;
-	}
-
-	.divTableHead {
-		height: 7vh;
-		font-size: 1rem;
-	}
-
-	.divTableCell {
-		height: 5vh;
-		font-size: 0.8rem;
-	}
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-	/* Header */
-	header {
-		height:6vh;
-	}
-	
-	#bar-graph, #question-mark {
-		top: 1vh;
-		width: 4vh;
-		height: 4vh;
-	}
-
-	#bar-graph {
-		left: 25vw;
-	}
-	
-	#question-mark {	
-		left: 66.5vw;
-	}
-
-	/* Footer */
-	footer {
-		height: 10vh;
-	}
-
-	#acknowledgements {
-		font-size: 1rem;
-		margin-top: 2.5vh;
-		margin-right: 2vw;
-	}
-
-	/* Main Screen */
-	.title {
-		font-size: 2rem;
-		margin-top: 2vh;
-	}
-
-	.subtitle {
-		font-size: 1.5rem;
-		margin-top: -8vh;
-	}
-
-	#type-guess,
-	.awesomplete > ul > li {
-		font-size: 1.25rem;
-	}
-
-	.awesomplete > ul {
-		max-height: 60vh;
-	}
-	
-	#image-hint {
-		font-size: 1.75rem;
-		margin-top: 2vh;
-	}
-
-	/* General Modal Specs */
-	.modal-content {
-		height: 75vh;
-		width: 75vw;
-	}
-
-	.close {
-		font-size: 2rem;
-		left: 69vw;
-	}
-
-	#image-hint-content-enter,
-	#wrong-content-enter,
-	#correct-content-enter {
-		        -webkit-animation-name: enterleft;
-		                animation-name: enterleft;
-		        -webkit-animation-duration: 1s;
-		                animation-duration: 1s;
-	}
-	
-	#image-hint-content-exit,
-	#wrong-content-exit,
-	#correct-content-exit {
-		        -webkit-animation-name: exitright;
-		                animation-name: exitright;
-		        -webkit-animation-duration: 1s;
-		                animation-duration: 1s;
-	}
-
-	/* Bar Graph Modal (stats) */
-	.stat {	
-		font-size: 1.25rem;
-		margin-bottom: 5vh;
-	}
-
-	.graph {
-		height: 45vh;
-	}
-
-	.guessNumber, .label {
-		font-size: 1.25rem;
-	}
-
-	.label {
-		margin-top: 1vh;
-	}
-
-	#guessLabel {
-		font-size: 1.75rem;
-		margin-top: 1vh;
-		margin-bottom: 1vh;
-	}
-	
-	/* Question Mark Modal (instructions) */
-	#question-mark-content {
-		-webkit-animation-name: animatetop;
-		        animation-name: animatetop;
-		-webkit-animation-duration: 1s;
-		        animation-duration: 1s;
-	}
-
-	#instruction-title {
-		font-size: 2.5rem;
-		margin-top: 0vh;
-	}
-
-	.list {
-		font-size: 1.25rem;
 		margin-top: -3vh;
 		padding-right: 2.5vw;
 	}
@@ -946,7 +1101,7 @@ input:disabled {
 	}
 		
 	#identify {
-		font-size: 2rem;
+		font-size: 2.5rem;
 		margin-top: 5vh;
 	}
 
@@ -974,7 +1129,7 @@ input:disabled {
 
 	/* Table */
 	#table {
-		height: 45vh;
+		height: 55vh;
 		width: 95vw;
 	}
 
@@ -993,13 +1148,13 @@ input:disabled {
 @media only screen and (min-width: 992px) {
 	/* Header */
 	header {
-		height:6vh;
+		height:5vh;
 	}
 	
 	#bar-graph, #question-mark {
-		top: 1vh;
-		width: 4vh;
-		height: 4vh;
+		top: 0.5vh;
+		width: 3vh;
+		height: 3vh;
 	}
 
 	#bar-graph {
@@ -1016,7 +1171,7 @@ input:disabled {
 	}
 
 	#acknowledgements {
-		font-size: 1rem;
+		font-size: 1.25rem;
 		margin-top: 2.5vh;
 		margin-right: 2vw;
 	}
@@ -1029,7 +1184,7 @@ input:disabled {
 
 	.subtitle {
 		font-size: 1.75rem;
-		margin-top: -7vh;
+		margin-top: -5vh;
 	}
 
 	#type-guess,
@@ -1042,7 +1197,7 @@ input:disabled {
 	}
 	
 	#image-hint {
-		font-size: 2rem;
+		font-size: 2.5rem;
 		margin-top: 1.5vh;
 	}
 
@@ -1053,8 +1208,8 @@ input:disabled {
 	}
 
 	.close {
-		font-size: 3rem;
-		left: 69vw;
+		font-size: 4rem;
+		left: 67.5vw;
 	}
 
 	#image-hint-content-enter,
@@ -1082,7 +1237,7 @@ input:disabled {
 	}
 
 	.graph {
-		height: 44vh;
+		height: 45vh;
 	}
 
 	.guessNumber, .label {
@@ -1108,12 +1263,12 @@ input:disabled {
 	}
 
 	#instruction-title {
-		font-size: 3rem;
-		margin-top: -2vh;
+		font-size: 3.5rem;
+		margin-top: -1.5vh;
 	}
 
 	.list {
-		font-size: 1.75rem;
+		font-size: 2rem;
 		margin-top: -1vh;
 		padding-right: 3vw;
 	}
@@ -1125,7 +1280,7 @@ input:disabled {
 	}
 		
 	#identify {
-		font-size: 3rem;
+		font-size: 4rem;
 		margin-top: 5vh;
 	}
 
@@ -1136,7 +1291,7 @@ input:disabled {
 	}
 	
 	#correctAnswer {
-		font-size: 2rem;
+		font-size: 2.5rem;
 		margin-top: 1vh;
 	}
 	
@@ -1153,200 +1308,19 @@ input:disabled {
 
 	/* Table */
 	#table {
-		height: 50vh;
+		height: 55vh;
 		width: 95vw;
 	}
 
 	.divTableHead {
 		height: 7vh;
-		font-size: 1.25rem;
+		font-size: 1.75rem;
 	}
 
 	.divTableCell {
 		height: 5vh;
-		font-size: 1.25rem;
+		font-size: 1.5rem;
 	}	
-}
-
-/* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-	/* Header */
-	header {
-		height:6vh;
-	}
-	
-	#bar-graph, #question-mark {
-		top: 1vh;
-		width: 4vh;
-		height: 4vh;
-	}
-
-	#bar-graph {
-		left: 25vw;
-	}
-	
-	#question-mark {	
-		left: 68.25vw;
-	}
-
-	/* Footer */
-	footer {
-		height: 8vh;
-	}
-
-	#acknowledgements {
-		font-size: 1.25rem;
-		margin-top: 1.5vh;
-		margin-right: 1.5vw;
-	}
-
-	/* Main Screen */
-	.title {
-		font-size: 3rem;
-		margin-top: 0vh;
-	}
-
-	.subtitle {
-		font-size: 2rem;
-		margin-top: -8vh;
-		margin-bottom: -1vh;
-	}
-
-	#type-guess,
-	.awesomplete > ul > li {
-		font-size: 2rem;
-	}
-
-	.awesomplete > ul {
-		max-height: 60vh;
-	}
-	
-	#image-hint {
-		font-size: 2.5rem;
-		margin-top: 1vh;
-	}
-
-	/* General Modal Specs */
-	.modal-content {
-		height: 75vh;
-		width: 75vw;
-	}
-
-	.close {
-		font-size: 3.5rem;
-		left: 69vw;
-	}
-
-	#image-hint-content-enter,
-	#wrong-content-enter,
-	#correct-content-enter {
-		        -webkit-animation-name: enterleft;
-		                animation-name: enterleft;
-		        -webkit-animation-duration: 1s;
-		                animation-duration: 1s;
-	}
-	
-	#image-hint-content-exit,
-	#wrong-content-exit,
-	#correct-content-exit {
-		        -webkit-animation-name: exitright;
-		                animation-name: exitright;
-		        -webkit-animation-duration: 1s;
-		                animation-duration: 1s;
-	}
-
-	/* Bar Graph Modal (stats) */
-	.stat {	
-		font-size: 2rem;
-		margin-bottom: 3vh;
-	}
-
-	.graph {
-		height: 41vh;
-	}
-
-	.guessNumber, .label {
-		font-size: 2rem;
-	}
-
-	.label {
-		margin-top: 1vh;
-	}
-
-	#guessLabel {
-		font-size: 2.5rem;
-		margin-top: 1vh;
-		margin-bottom: 2vh;
-	}
-	
-	/* Question Mark Modal (instructions) */
-	#question-mark-content {
-		-webkit-animation-name: animatetop;
-		        animation-name: animatetop;
-		-webkit-animation-duration: 1s;
-		        animation-duration: 1s;
-	}
-
-	#instruction-title {
-		font-size: 3rem;
-		margin-top: -2vh;
-	}
-
-	.list {
-		font-size: 2rem;
-		margin-top: -1vh;
-		padding-right: 3vw;
-	}
-
-	/* Image Hint Modal (hint, correct, wrong) */
-	.images {
-		height: 50vh;
-		width: 50vw;
-	}
-		
-	#identify {
-		font-size: 3rem;
-		margin-top: 5vh;
-	}
-
-	#correct {
-		font-size: 5rem;
-		margin-top: -5vh;
-		margin-bottom: 0vh;
-	}
-	
-	#correctAnswer {
-		font-size: 2rem;
-		margin-top: 1vh;
-	}
-	
-	#wrong {
-		font-size: 3rem;
-		margin-top: -3vh;
-		margin-bottom: 1.5vh;
-	}
-	
-	#wrongAnswer {
-		font-size: 2rem;
-		margin-top: 1vh;
-	}
-
-	/* Table */
-	#table {
-		height: 46vh;
-		width: 95vw;
-		margin-top: -2vh;
-	}
-
-	.divTableHead {
-		height: 7vh;
-		font-size: 1.5rem;
-	}
-
-	.divTableCell {
-		height: 5vh;
-		font-size: 1.5rem;
-	}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -1357,7 +1331,7 @@ input:disabled {
 	}
 	
 	#bar-graph, #question-mark {
-		top: 1vh;
+		top: 0.5vh;
 		width: 4vh;
 		height: 4vh;
 	}
@@ -1383,23 +1357,23 @@ input:disabled {
 
 	/* Main Screen */
 	.title {
-		font-size: 3rem;
-		margin-top: 0vh;
+		font-size: 4rem;
+		margin-top: -2vh;
 	}
 
 	.subtitle {
-		font-size: 2rem;
-		margin-top: -8vh;
+		font-size: 2.5rem;
+		margin-top: -10vh;
 		margin-bottom: -1vh;
 	}
 
 	#type-guess,
 	.awesomplete > ul > li {
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 
 	.awesomplete > ul {
-		max-height: 65vh;
+		max-height: 60vh;
 	}
 	
 	#image-hint {
@@ -1413,8 +1387,8 @@ input:disabled {
 	}
 
 	.close {
-		font-size: 3.5rem;
-		left: 70vw;
+		font-size: 4rem;
+		left: 69.5vw;
 	}
 
 	#image-hint-content-enter,
@@ -1446,7 +1420,7 @@ input:disabled {
 	}
 
 	.guessNumber, .label {
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 
 	.label {
@@ -1454,7 +1428,7 @@ input:disabled {
 	}
 
 	#guessLabel {
-		font-size: 3rem;
+		font-size: 4rem;
 		margin-top: 1vh;
 		margin-bottom: 2vh;
 	}
@@ -1473,7 +1447,7 @@ input:disabled {
 	}
 
 	.list {
-		font-size: 2rem;
+		font-size: 2.5rem;
 		margin-top: -2vh;
 		padding-right: 3vw;
 	}
@@ -1481,7 +1455,7 @@ input:disabled {
 	/* Image Hint Modal (hint, correct, wrong) */
 	.images {
 		height: 50vh;
-		width: 50vw;
+		width: 40vw;
 	}
 		
 	#identify {
@@ -1496,7 +1470,7 @@ input:disabled {
 	}
 	
 	#correctAnswer {
-		font-size: 3rem;
+		font-size: 2.5rem;
 		margin-top: 1vh;
 	}
 	
@@ -1513,18 +1487,17 @@ input:disabled {
 
 	/* Table */
 	#table {
-		height: 50vh;
+		height: 45vh;
 		width: 95vw;
-		margin-top: -2vh;
 	}
 
 	.divTableHead {
 		height: 7vh;
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 
 	.divTableCell {
 		height: 5vh;
-		font-size: 1.5rem;
+		font-size: 1.75rem;
 	}
 }
