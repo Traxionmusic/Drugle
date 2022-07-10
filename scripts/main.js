@@ -1,6 +1,6 @@
 // Drug of the day
 var today = new Date();
-var origin = new Date(2022,6,11,0,0,0,0);
+var origin = new Date(2022,6,12,0,0,0,0);
 var difference = (today - origin);
 var days = Math.floor(difference / 864e5);
 const answerDrugIndexNumber = randomizedIndexes[days]; /* Array index number of answer */
