@@ -102,6 +102,7 @@ input:disabled {
 	color: #D0F4FB;
 	font-weight: bold;
 	overflow:auto;
+	width: 75vw;
 }
 
 .close {
@@ -195,7 +196,7 @@ input:disabled {
 }
 
 .item {
-	line-height: 200%;
+	line-height: 175%;
 }
 
 .bold {
@@ -234,6 +235,7 @@ input:disabled {
 	margin-right: auto;
 	text-align: center;
 	display: none;
+	width: 95vw;
 }
 
 .divTableRow {
@@ -244,9 +246,10 @@ input:disabled {
 	display: table-cell;
 	padding: 0.5vw 1vh;
 	border: solid 0.05rem grey;
-	width: 25vw;
 	word-wrap: break-word;
 	vertical-align: middle;
+	max-width: 23.75vw;
+	width: 23.75vw;
 }
 
 .divTableHeading {
@@ -277,9 +280,10 @@ input:disabled {
 	display: table-cell;
 	padding: 0.5vw 1vh;
 	border: solid 0.05rem grey;
-	width: 25vw;
 	word-wrap: break-word;
 	vertical-align: middle;
+	max-width: 23.75vw;
+	width: 23.75vw;
 }
 
 [id*="row-"] {
@@ -352,46 +356,6 @@ input:disabled {
    }
  }
 
- /* small */
-@-webkit-keyframes enterleftsmall {
-	from {
-		margin-left: -100%;
-	}
-
-	to {
-		margin-left: 10vw;
-	}
-}
-@keyframes enterleftsmall {
-	from {
-		margin-left: -100%;
-	}
-
-	to {
-		margin-left: 10vw;
-	}
-}
-
-@-webkit-keyframes exitrightsmall {
-	from {
-		margin-left: 10vw;
-	}
-
-	to {
-		margin-left: 100%;
-	}
-}
-@keyframes exitrightsmall {
-	from {
-		margin-left: 10vw;
-	}
-
-	to {
-		margin-left: 100%;
-	}
-}
-
- /* normal */
  @-webkit-keyframes enterleft {
 	from {
 		margin-left: -100%;
@@ -432,17 +396,17 @@ input:disabled {
 
 /* Responsiveness */
 /* Weird width (under 400px) */
-@media only screen and (max-width: 399.98px) {
+@media only screen and (min-width: 360px) {
 	/* Header */
 	header {
-		height:3vh;
+		height:5vh;
 	}
 
 	#bar-graph,
 	#question-mark {
-		margin-top: 0.5vh;
-		width: 2vh;
-		height: 2vh;
+		margin-top: 1vh;
+		width: 3vh;
+		height: 3vh;
 	}
 
 	#bar-graph {
@@ -470,8 +434,9 @@ input:disabled {
 	}
 
 	.subtitle {
-		font-size: 0.9rem;
-		margin-top: -4vh;
+		font-size: 1rem;
+		margin-top: -7vh;
+		margin-bottom: -1vh;
 	}
 
 	#type-guess,
@@ -480,7 +445,7 @@ input:disabled {
 	}
 
 	.awesomplete > ul {
-		max-height: 70vh;
+		max-height: 65vh;
 	}
 
 	#image-hint {
@@ -490,20 +455,19 @@ input:disabled {
 
 	/* General Modal Specs */
 	.modal-content {	
-		height: 75%;
-		width: 80vw;
+		height: 70vh;
 	}
 
 	.close {
-		font-size: 2rem;
-		left: 71vw;
+		font-size: 1.5rem;
+		left: 68vw;
 	}
 
 	#image-hint-content-enter,
 	#wrong-content-enter,
 	#correct-content-enter {
-				-webkit-animation-name: enterleftsmall;
-						animation-name: enterleftsmall;
+				-webkit-animation-name: enterleft;
+						animation-name: enterleft;
 				-webkit-animation-duration: 1s;
 						animation-duration: 1s;
 	}
@@ -519,12 +483,12 @@ input:disabled {
 
 	/* Bar Graph Modal (stats) */
 	.stat {	
-		font-size: 0.8rem;
+		font-size: 0.75rem;
 		margin-bottom: 2.5vh;
 	}
 
 	.graph {
-		height: 50vh;
+		height: 42.5vh;
 	}
 
 	.guessNumber, .label {
@@ -551,63 +515,60 @@ input:disabled {
 
 	#instruction-title {
 		font-size: 1.5rem;
-		margin-top: -0.5vh;
-		padding-right: 2vw
+		margin-right: 2vw;
+		margin-top: -2.5vh;
 	}
 
 	.list {
-		font-size: 1rem;
-		margin-top: -1vh;
-		padding-right: 2.5vw;
+		font-size: 0.85rem;
+		margin-top: -2vh;
+		margin-right: 1vw;
 	}
 
 	/* Image Hint Modal (hint, correct, wrong) */
 	.images {
-		height: 40vh;
-		width: 70vw;
+		height: 50vh;
+		width: 80vw;
 	}
 		
 	#identify {
 		font-size: 1.75rem;
-		margin-top: 5vh;
+		margin-top: -0.5vh;
 	}
 
 	#correct {
-		font-size: 3rem;
-		margin-top: -2vh;
-		margin-bottom: 0vh;
+		font-size: 2rem;
+		margin-top: -2.5vh;
+		margin-bottom: -2vh;
 	}
 
 	#correctAnswer {
-		font-size: 1.25rem;
-		margin-top: 2vh;
+		font-size: 1rem;
+		margin-top: 1vh;
 	}
 
 	#wrong {
 		font-size: 1.5rem;
-		margin-top: -1.5vh;
-		margin-bottom: 1.5vh;
+		margin-top: -2vh;
+		margin-bottom: 1vh;
 	}
 
 	#wrongAnswer {
-		font-size: 1.25rem;
-		margin-top: 2vh;
+		font-size: 0.75rem;
+		margin-top: 0.5vh;
 	}
 
 	/* Table */
 	#table {
-		height: 65vh;
-		width: 95vw;
+		height: 55vh;
 	}
 
 	.divTableHead {
-		height: 5vh;
-		font-size: 0.75rem;
+		font-size: 0.5rem;
 	}
 
 	.divTableCell {
-		height: 2.5vh;
-		font-size: 0.75rem;
+		font-size: 0.5rem;
 	}
 }
 
@@ -646,7 +607,7 @@ input:disabled {
 
 	/* Main Screen */
 	.title {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 	}
 
 	.subtitle {
@@ -671,7 +632,6 @@ input:disabled {
 	/* General Modal Specs */
 	.modal-content {
 		height: 65vh;
-		width: 80vw;
 	}
 
 	.close {
@@ -682,8 +642,8 @@ input:disabled {
 	#image-hint-content-enter,
 	#wrong-content-enter,
 	#correct-content-enter {
-				-webkit-animation-name: enterleftsmall;
-						animation-name: enterleftsmall;
+				-webkit-animation-name: enterleft;
+						animation-name: enterleft;
 				-webkit-animation-duration: 1s;
 						animation-duration: 1s;
 	}
@@ -776,8 +736,7 @@ input:disabled {
 
 	/* Table */
 	#table {
-		height: 65vh;
-		width: 95vw;
+		height: 60vh;
 	}
 
 	.divTableHead {
@@ -825,17 +784,18 @@ input:disabled {
 
 	/* Main Screen */
 	.title {
-		font-size: 3rem;
+		font-size: 2rem;
+		margin-top: 0.5vh;
 	}
 
 	.subtitle {
-		font-size: 2rem;
-		margin-top: -8vh;
+		font-size: 1.5rem;
+		margin-top: -6vh;
 	}
 
 	#type-guess,
 	.awesomplete > ul > li {
-		font-size: 2rem;
+		font-size: 1.75rem;
 	}
 
 	.awesomplete > ul {
@@ -843,13 +803,12 @@ input:disabled {
 	}
 	
 	#image-hint {
-		font-size: 2.5rem;
+		font-size: 2rem;
 	}
 
 	/* General Modal Specs */
 	.modal-content {
-		height: 75vh;
-		width: 75vw;
+		height: 65vh;
 	}
 
 	.close {
@@ -877,12 +836,12 @@ input:disabled {
 
 	/* Bar Graph Modal (stats) */
 	.stat {	
-		font-size: 1.5rem;
-		margin-bottom: 5vh;
+		font-size: 1.25rem;
+		margin-bottom: 3vh;
 	}
 
 	.graph {
-		height: 45vh;
+		height: 40vh;
 	}
 
 	.guessNumber, .label {
@@ -908,7 +867,8 @@ input:disabled {
 	}
 
 	#instruction-title {
-		font-size: 3rem;
+		font-size: 1.75rem;
+		margin-top: -2vh;
 	}
 
 	.list {
@@ -918,51 +878,49 @@ input:disabled {
 
 	/* Image Hint Modal (hint, correct, wrong) */
 	.images {
-		height: 50vh;
+		height: 40vh;
 		width: 70vw;
 	}
 		
 	#identify {
 		font-size: 3rem;
-		margin-top: 5vh;
+		margin-top: -1vh;
 	}
 
 	#correct {
-		font-size: 5rem;
-		margin-top: -2vh;
-		margin-bottom: 0vh;
+		font-size: 3rem;
+		margin-top: -5vh;
 	}
 	
 	#correctAnswer {
 		font-size: 1.5rem;
-		margin-top: 2vh;
+		margin-top: 1vh;
 	}
 	
 	#wrong {
 		font-size: 2.5rem;
-		margin-top: -1vh;
+		margin-top: -2.5vh;
 		margin-bottom: 1vh;
 	}
 	
 	#wrongAnswer {
-		font-size: 1.75rem;
-		margin-top: 2vh;
+		font-size: 1.5rem;
+		margin-top: 1vh;
 	}
 
 	/* Table */
 	#table {
-		height: 50vh;
-		width: 95vw;
+		height: 55vh;
 	}
 
 	.divTableHead {
-		height: 7vh;
-		font-size: 1.25rem;
+		height: 5vh;
+		font-size: 0.75rem;
 	}
 
 	.divTableCell {
-		height: 5vh;
-		font-size: 1.25rem;
+		height: 2.5vh;
+		font-size: 0.75rem;
 	}
 }
 
@@ -993,7 +951,7 @@ input:disabled {
 	}
 
 	#acknowledgements {
-		font-size: 1rem;
+		font-size: 1.5rem;
 		margin-top: 2vh;
 		margin-right: 2vw;
 	}
@@ -1001,12 +959,12 @@ input:disabled {
 	/* Main Screen */
 	.title {
 		font-size: 2rem;
-		margin-top: 1vh;
+		margin-top: 1.5vh;
 	}
 
 	.subtitle {
 		font-size: 1.5rem;
-		margin-top: -6vh;
+		margin-top: -5vh;
 	}
 
 	#type-guess,
@@ -1026,7 +984,6 @@ input:disabled {
 	/* General Modal Specs */
 	.modal-content {
 		height: 75vh;
-		width: 75vw;
 	}
 
 	.close {
@@ -1085,56 +1042,54 @@ input:disabled {
 	}
 
 	#instruction-title {
-		font-size: 2.5rem;
+		font-size: 3rem;
 	}
 
 	.list {
-		font-size: 1.5rem;
-		margin-top: -3vh;
+		font-size: 2rem;
 		padding-right: 2.5vw;
 	}
 
 	/* Image Hint Modal (hint, correct, wrong) */
 	.images {
-		height: 50vh;
+		height: 40vh;
 		width: 60vw;
 	}
 		
 	#identify {
-		font-size: 2.5rem;
-		margin-top: 5vh;
+		font-size: 5rem;
+		margin-top: 2.5vh;
 	}
 
 	#correct {
-		font-size: 3rem;
+		font-size: 5rem;
 		margin-top: -2vh;
 		margin-bottom: 0vh;
 	}
 	
 	#correctAnswer {
-		font-size: 1.5rem;
-		margin-top: 2vh;
+		font-size: 2rem;
+		margin-top: 1vh;
 	}
 	
 	#wrong {
-		font-size: 2rem;
+		font-size: 3rem;
 		margin-top: -1vh;
 		margin-bottom: 1.5vh;
 	}
 	
 	#wrongAnswer {
-		font-size: 1.5rem;
-		margin-top: 2vh;
+		font-size: 2rem;
+		margin-top: 1vh;
 	}
 
 	/* Table */
 	#table {
 		height: 55vh;
-		width: 95vw;
 	}
 
 	.divTableHead {
-		height: 7vh;
+		height: 5vh;
 		font-size: 1rem;
 	}
 
@@ -1204,7 +1159,6 @@ input:disabled {
 	/* General Modal Specs */
 	.modal-content {
 		height: 75vh;
-		width: 75vw;
 	}
 
 	.close {
@@ -1309,7 +1263,6 @@ input:disabled {
 	/* Table */
 	#table {
 		height: 55vh;
-		width: 95vw;
 	}
 
 	.divTableHead {
@@ -1383,7 +1336,6 @@ input:disabled {
 	/* General Modal Specs */
 	.modal-content {
 		height: 80vh;
-		width: 75vw;
 	}
 
 	.close {
@@ -1488,7 +1440,6 @@ input:disabled {
 	/* Table */
 	#table {
 		height: 45vh;
-		width: 95vw;
 	}
 
 	.divTableHead {
@@ -1562,7 +1513,6 @@ input:disabled {
 	/* General Modal Specs */
 	.modal-content {
 		height: 75vh;
-		width: 75vw;
 	}
 
 	.close {
@@ -1668,7 +1618,6 @@ input:disabled {
 	/* Table */
 	#table {
 		height: 45vh;
-		width: 95vw;
 	}
 
 	.divTableHead {
