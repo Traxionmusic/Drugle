@@ -394,6 +394,24 @@ input:disabled {
 	}
 }
 
+#image-hint-content-enter,
+	#wrong-content-enter,
+	#correct-content-enter {
+				-webkit-animation-name: enterleft;
+						animation-name: enterleft;
+				-webkit-animation-duration: 1s;
+						animation-duration: 1s;
+	}
+
+	#image-hint-content-exit,
+	#wrong-content-exit,
+	#correct-content-exit {
+				-webkit-animation-name: exitright;
+						animation-name: exitright;
+				-webkit-animation-duration: 1s;
+						animation-duration: 1s;
+	}
+
 /* Responsiveness */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 599.98px) {
@@ -460,24 +478,6 @@ input:disabled {
 	.close {
 		font-size: 1.5rem;
 		left: 67.5vw;
-	}
-
-	#image-hint-content-enter,
-	#wrong-content-enter,
-	#correct-content-enter {
-				-webkit-animation-name: enterleft;
-						animation-name: enterleft;
-				-webkit-animation-duration: 1s;
-						animation-duration: 1s;
-	}
-
-	#image-hint-content-exit,
-	#wrong-content-exit,
-	#correct-content-exit {
-				-webkit-animation-name: exitrightsmall;
-						animation-name: exitrightsmall;
-				-webkit-animation-duration: 1s;
-						animation-duration: 1s;
 	}
 
 	/* Bar Graph Modal (stats) */
@@ -637,24 +637,6 @@ input:disabled {
 		left: 67vw;
 	}
 
-	#image-hint-content-enter,
-	#wrong-content-enter,
-	#correct-content-enter {
-		        -webkit-animation-name: enterleft;
-		                animation-name: enterleft;
-		        -webkit-animation-duration: 1s;
-		                animation-duration: 1s;
-	}
-	
-	#image-hint-content-exit,
-	#wrong-content-exit,
-	#correct-content-exit {
-		        -webkit-animation-name: exitright;
-		                animation-name: exitright;
-		        -webkit-animation-duration: 1s;
-		                animation-duration: 1s;
-	}
-
 	/* Bar Graph Modal (stats) */
 	.stat {	
 		font-size: 1.25rem;
@@ -808,24 +790,6 @@ input:disabled {
 	.close {
 		font-size: 3rem;
 		left: 68vw;
-	}
-
-	#image-hint-content-enter,
-	#wrong-content-enter,
-	#correct-content-enter {
-		        -webkit-animation-name: enterleft;
-		                animation-name: enterleft;
-		        -webkit-animation-duration: 1s;
-		                animation-duration: 1s;
-	}
-	
-	#image-hint-content-exit,
-	#wrong-content-exit,
-	#correct-content-exit {
-		        -webkit-animation-name: exitright;
-		                animation-name: exitright;
-		        -webkit-animation-duration: 1s;
-		                animation-duration: 1s;
 	}
 
 	/* Bar Graph Modal (stats) */
@@ -983,24 +947,6 @@ input:disabled {
 		left: 67.5vw;
 	}
 
-	#image-hint-content-enter,
-	#wrong-content-enter,
-	#correct-content-enter {
-		        -webkit-animation-name: enterleft;
-		                animation-name: enterleft;
-		        -webkit-animation-duration: 1s;
-		                animation-duration: 1s;
-	}
-	
-	#image-hint-content-exit,
-	#wrong-content-exit,
-	#correct-content-exit {
-		        -webkit-animation-name: exitright;
-		                animation-name: exitright;
-		        -webkit-animation-duration: 1s;
-		                animation-duration: 1s;
-	}
-
 	/* Bar Graph Modal (stats) */
 	.stat {	
 		font-size: 1.75rem;
@@ -1156,24 +1102,6 @@ input:disabled {
 	.close {
 		font-size: 4rem;
 		left: 69.5vw;
-	}
-
-	#image-hint-content-enter,
-	#wrong-content-enter,
-	#correct-content-enter {
-		        -webkit-animation-name: enterleft;
-		                animation-name: enterleft;
-		        -webkit-animation-duration: 1s;
-		                animation-duration: 1s;
-	}
-	
-	#image-hint-content-exit,
-	#wrong-content-exit,
-	#correct-content-exit {
-		        -webkit-animation-name: exitright;
-		                animation-name: exitright;
-		        -webkit-animation-duration: 1s;
-		                animation-duration: 1s;
 	}
 
 	/* Bar Graph Modal (stats) */

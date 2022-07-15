@@ -71,29 +71,43 @@ var closeImage = document.getElementById("image-close");
 if (tableCounter === 8 && localStorage.getItem('winToday') === "no") {
 	btnImage.onclick = function() {
 		modalGameOver.style.display = "block";
+		gameOverStatus.addEventListener("animationend", function() {
+			modalGameOver.style.display = "block";
+		});
 	};
 	document.getElementById("wrongAnswer").innerHTML =`${printAnswerDrug}` + " was the correct answer";
 	} else {
 	btnImage.onclick = function() {
 		modalImage.style.display = "block";
+		imageStatus.addEventListener("animationend", function() {
+			modalImage.style.display = "block";
+		});
 	}
 };
 if (localStorage.getItem('winToday') === 'yes') {
 	btnImage.onclick = function() {
 		modalCorrect.style.display = "block";
+		correctStatus.addEventListener("animationend", function() {
+			modalCorrect.style.display = "block";
+		});
 	};
 	document.getElementById("correctAnswer").innerHTML =`${printAnswerDrug}`;
 } else {
 	btnImage.onclick = function() {
 		modalImage.style.display = "block";
+		imageStatus.addEventListener("animationend", function() {
+			modalImage.style.display = "block";
+		});
 	};
 };
 
+var imageStatus = document.getElementById("image-hint-content-enter");
+
 closeImage.onclick = function() {
-	document.getElementById("image-hint-content-enter").id = "image-hint-content-exit";
-	document.getElementById("image-hint-content-exit").addEventListener("animationend", function() {
-		document.getElementById("image-hint-content-exit").id = "image-hint-content-enter";
+	imageStatus.id = "image-hint-content-exit"
+	imageStatus.addEventListener("animationend", function() {
 		modalImage.style.display = "none";
+		imageStatus.id = "image-hint-content-enter";
 	});
 }
 
@@ -102,10 +116,12 @@ var modalGameOver = document.getElementById("game-over-popup");
 
 var closeGameOver = document.getElementById("lose-close");
 
+var gameOverStatus = document.getElementById("wrong-content-enter");
+
 closeGameOver.onclick = function() {
-	document.getElementById("wrong-content-enter").id = "wrong-content-exit";
-	document.getElementById("wrong-content-exit").addEventListener("animationend", function() {
-		document.getElementById("wrong-content-exit").id = "wrong-content-enter";
+	gameOverStatus.id = "wrong-content-exit";
+	gameOverStatus.addEventListener("animationend", function() {
+		gameOverStatus.id = "wrong-content-enter";
 		modalGameOver.style.display = "none";
 	});
 }
@@ -115,10 +131,12 @@ var modalCorrect = document.getElementById("correct-popup");
 
 var closeCorrect = document.getElementById("win-close");
 
+var correctStatus = document.getElementById("correct-content-enter");
+
 closeCorrect.onclick = function() {
-	document.getElementById("correct-content-enter").id = "correct-content-exit";
-	document.getElementById("correct-content-exit").addEventListener("animationend", function() {
-		document.getElementById("correct-content-exit").id = "correct-content-enter";
+	correctStatus.id = "correct-content-exit";
+	correctStatus.addEventListener("animationend", function() {
+		correctStatus.id = "correct-content-enter";
 		modalCorrect.style.display = "none";
 	});
 }
@@ -133,12 +151,15 @@ window.onclick = function(event) {
 	}
 	if (event.target == modalImage) {
 		modalImage.style.display = "none";
+		imageStatus.id = "image-hint-content-enter";
 	}
 	if (event.target == modalGameOver) {
 		modalGameOver.style.display = "none";
+		gameOverStatus.id = "wrong-content-enter";
 	}
 	if (event.target == modalCorrect) {
 		modalCorrect.style.display = "none";
+		correctStatus.id = "correct-content-enter";
 	}
 };
 
@@ -160,6 +181,9 @@ window.onload = function() {
 		modalGraph.style.display = "block";
 		btnImage.onclick = function() {
             modalGameOver.style.display = "block";
+			gameOverStatus.addEventListener("animationend", function() {
+				modalGameOver.style.display = "block";
+			});
         };
 	};
 	if (localStorage.getItem('winToday') === 'yes') {
@@ -169,6 +193,9 @@ window.onload = function() {
         guessArea.placeholder = "Great job!";
 		btnImage.onclick = function() {
             modalCorrect.style.display = "block";
+			correctStatus.addEventListener("animationend", function() {
+				modalCorrect.style.display = "block";
+			});
         };
 	};
 	document.getElementById("table").scrollTo(0, document.getElementById("table").scrollHeight);

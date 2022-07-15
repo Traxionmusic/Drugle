@@ -167,6 +167,9 @@ function checkGuess() {
         row.style.display = "table-row";
         btnImage.onclick = function() {
             modalCorrect.style.display = "block";
+            correctStatus.addEventListener("animationend", function() {
+				modalCorrect.style.display = "block";
+			});
         };
         localStorage.setItem('winToday', 'yes');
     } else if (currentGuess === 8) { /* lose */
@@ -195,6 +198,9 @@ function checkGuess() {
         currentGuessMax();
         btnImage.onclick = function() {
             modalGameOver.style.display = "block";
+            gameOverStatus.addEventListener("animationend", function() {
+				modalGameOver.style.display = "block";
+			});
         };
     } else { /* use a guess and go to next turn */
         currentGuess++;
