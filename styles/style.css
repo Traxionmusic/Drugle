@@ -138,6 +138,7 @@ input:disabled {
 	margin-right: auto;
 	align-items: flex-end;
 	width: 85%;
+	max-height: 75%;
 }
 
 .bar {
@@ -247,6 +248,8 @@ input:disabled {
 	border: solid 0.05rem grey;
 	word-wrap: break-word;
 	vertical-align: middle;
+	height: 5vh;
+	max-height: 5vh;
 	max-width: 23.75vw;
 	width: 23.75vw;
 }
@@ -281,6 +284,8 @@ input:disabled {
 	border: solid 0.05rem grey;
 	word-wrap: break-word;
 	vertical-align: middle;
+	height: 5vh;
+	max-height: 5vh;
 	max-width: 23.75vw;
 	width: 23.75vw;
 }
@@ -1044,7 +1049,7 @@ input:disabled {
 	}
 	
 	#bar-graph, #question-mark {
-		top: 0.5vh;
+		top: 1vh;
 		width: 4vh;
 		height: 4vh;
 	}
@@ -1185,11 +1190,11 @@ input:disabled {
 	}
 
 	.divTableHead {
-		font-size: 1rem;
+		font-size: 1.5rem;
 	}
 
 	.divTableCell {
-		font-size: 1rem;
+		font-size: 1.5rem;
 	}
 }
 
