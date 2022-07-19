@@ -213,6 +213,29 @@ input:disabled {
 	color : #E74054;
 }
 
+#copybox {
+	display: none;
+}
+
+.fadeOut {
+			-webkit-animation-duration: 5s;
+	        animation-duration: 5s;
+}
+
+#copyboxOn {
+	border-radius: 10px;
+	margin: 0 auto;
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	color: #FFFFFF;
+	background-color: #000000;
+	display: block;
+	z-index: 99;
+	text-align: center;
+	
+}
+
 /* Image Hint Modal (hint, correct, wrong) */
 .images {
 	display: flex;
@@ -228,6 +251,11 @@ input:disabled {
 	text-align: center;
 }
 
+#share {
+	position: relative;
+	display: flex;
+	align-items:center;
+}
 /* Table */
 #table {
 	overflow-y: auto;
@@ -397,6 +425,30 @@ input:disabled {
 		margin-left: 100%;
 	}
 }
+
+
+@-webkit-keyframes fadeOut {
+	0% {opacity: 1;}
+	100% {opacity: 0;} 
+ }
+
+
+@keyframes fadeOut {
+	0% {opacity: 1;}
+	100% {opacity: 0;} 
+ } 
+
+
+ @-webkit-keyframes fadeOut2 {
+	0% {opacity: 1;}
+	100% {opacity: 0;} 
+ } 
+
+
+ @keyframes fadeOut2 {
+	0% {opacity: 1;}
+	100% {opacity: 0;} 
+ } 
 
 #image-hint-content-enter,
 	#wrong-content-enter,
@@ -573,6 +625,21 @@ input:disabled {
 	.divTableCell {
 		font-size: 0.6rem;
 	}
+
+	#copyboxOn {
+		padding: 2vh 1vw;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 40vw;
+		margin-left: -20vw;
+		font-size: 1rem;
+	}
+
+	#share {
+		height: 5vh;
+		width: 20vw;
+		margin-top: 4vh;
+	}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -697,6 +764,7 @@ input:disabled {
 	#correct {
 		font-size: 3rem;
 		margin-top: -2vh;
+		margin-bottom: -1vh;
 	}
 	
 	#correctAnswer {
@@ -726,6 +794,21 @@ input:disabled {
 
 	.divTableCell {
 		font-size: 0.75rem;
+	}
+
+	#copyboxOn {
+		padding: 1.5vh 1vw;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 40vw;
+		margin-left: -20vw;
+		font-size: 1rem;
+	}
+
+	#share {
+		height: 5vh;
+		width: 15vw;
+		margin-top: 0vh;
 	}
 }
 
@@ -882,6 +965,21 @@ input:disabled {
 	.divTableCell {
 		font-size: 1rem;
 	}
+
+	#copyboxOn {
+		padding: 1.5vh 1vw;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 30vw;
+		margin-left: -15vw;
+		font-size: 1rem;
+	}
+
+	#share {
+		height: 7.5vh;
+		width: 17.5vw;
+		margin-top: 0vh;
+	}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -1007,7 +1105,7 @@ input:disabled {
 
 	#correct {
 		font-size: 5rem;
-		margin-top: -10vh;
+		margin-top: -5vh;
 		margin-bottom: 0vh;
 	}
 	
@@ -1038,7 +1136,22 @@ input:disabled {
 
 	.divTableCell {
 		font-size: 1rem;
-	}	
+	}
+	
+	#copyboxOn {
+		padding: 1.5vh 1vw;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 30vw;
+		margin-left: -15vw;
+		font-size: 1.25rem;
+	}
+
+	#share {
+		height: 6vh;
+		width: 15vw;
+		margin-top: 0vh;
+	}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -1154,7 +1267,7 @@ input:disabled {
 	/* Image Hint Modal (hint, correct, wrong) */
 	.images {
 		height: 50vh;
-		width: 30vw;
+		width: 40vw;
 	}
 		
 	#identify {
@@ -1196,6 +1309,21 @@ input:disabled {
 	.divTableCell {
 		font-size: 1.5rem;
 	}
+
+	#copyboxOn {
+		padding: 1.5vh 1vw;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 30vw;
+		margin-left: -15vw;
+		font-size: 1.25rem;
+	}
+
+	#share {
+		height: 7.5vh;
+		width: 15vw;
+		margin-top: 2vh;
+	}
 }
 
 /* Iphone XS, X */
@@ -1206,6 +1334,21 @@ input:disabled {
 
 	.divTableHead, .divTableCell {
 		font-size: 0.55rem;
+	}
+	
+	#copyboxOn {
+		padding-top: 1.5vh;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 60vw;
+		margin-left: -30vw;
+		font-size: 1rem;
+	}
+
+	#share {
+		height: 5vh;
+		width: 25vw;
+		margin-top: 3vh;
 	}
 }
 
@@ -1222,6 +1365,21 @@ input:disabled {
 	#table {
 		height: 65vh;
 	}
+
+	#copyboxOn {
+		padding: 2vh 1vw;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 60vw;
+		margin-left: -30vw;
+		font-size: 1rem;
+	}
+
+	#share {
+		height: 5vh;
+		width: 25vw;
+		margin-top: 3vh;
+	}
 }
 
 /* iPhone 8 Plus, 7 Plus, 6S Plus */
@@ -1236,6 +1394,21 @@ input:disabled {
 
 	.awesomplete > ul {
 		max-height: 65vh;
+	}
+
+	#copyboxOn {
+		padding: 1.5vh 1vw;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 60vw;
+		margin-left: -30vw;
+		font-size: 1rem;
+	}
+
+	#share {
+		height:5vh;
+		width: 20vw;
+		margin-top: 2vh;
 	}
 }
 
@@ -1268,6 +1441,21 @@ input:disabled {
 	#table {
 		height: 57.5vh;
 	}
+
+	#copyboxOn {
+		padding: 1vh 1vw;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 60vw;
+		margin-left: -30vw;
+		font-size: 1rem;
+	}
+
+	#share {
+		height:5vh;
+		width: 20vw;
+		margin-top: 0vh;
+	}
 }
 
 /* Galaxy S9 Plus, S8 Plus */
@@ -1278,6 +1466,21 @@ input:disabled {
 
 	.divTableHead, .divTableCell {
 		font-size: 0.65rem;
+	}
+
+	#copyboxOn {
+		padding: 2vh 1vw;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 60vw;
+		margin-left: -30vw;
+		font-size: 1rem;
+	}
+
+	#share {
+		height:5vh;
+		width: 20vw;
+		margin-top: 4vh;
 	}
 }
 
@@ -1293,6 +1496,21 @@ input:disabled {
 
 	#instruction-title {
 		font-size: 1.5rem;
+	}
+
+	#copyboxOn {
+		padding: 1.5vh 1vw;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 60vw;
+		margin-left: -30vw;
+		font-size: 1rem;
+	}
+
+	#share {
+		height:5vh;
+		width: 20vw;
+		margin-top: 2vh;
 	}
 }
 
@@ -1351,6 +1569,21 @@ input:disabled {
 	#table {
 		height: 55vh;
 	}
+
+	#copyboxOn {
+		padding: 1vh 1vw;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 60vw;
+		margin-left: -30vw;
+		font-size: 1rem;
+	}
+
+	#share {
+		height:5vh;
+		width: 20vw;
+		margin-top: 3vh;
+	}
 }
 
 /* LG Optimus L70 */
@@ -1377,6 +1610,21 @@ input:disabled {
 	
 	.list {
 		font-size: 0.9rem;
+	}
+	
+	#copyboxOn {
+		padding: 1vh 1vw;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 60vw;
+		margin-left: -30vw;
+		font-size: 1rem;
+	}
+
+	#share {
+		height:5vh;
+		width: 20vw;
+		margin-top: 0vh;
 	}
 }
 
@@ -1405,6 +1653,21 @@ input:disabled {
 	.list {
 		font-size: 0.9rem;
 	}
+
+	#copyboxOn {
+		padding: 1.5vh 1vw;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 60vw;
+		margin-left: -30vw;
+		font-size: 1rem;
+	}
+
+	#share {
+		height:5vh;
+		width: 20vw;
+		margin-top: 1vh;
+	}
 }
 
 /* Pixel 2 */
@@ -1431,6 +1694,21 @@ input:disabled {
 	
 	.list {
 		font-size: 0.9rem;
+	}
+	
+	#copyboxOn {
+		padding: 1.5vh 1vw;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 60vw;
+		margin-left: -30vw;
+		font-size: 1rem;
+	}
+
+	#share {
+		height:5vh;
+		width: 20vw;
+		margin-top: 1vh;
 	}
 }
 
@@ -1505,6 +1783,21 @@ input:disabled {
 	#table {
 		height: 50vh;
 	}
+
+	#copyboxOn {
+		padding: 1.5vh 1vw;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 60vw;
+		margin-left: -30vw;
+		font-size: 0.75rem;
+	}
+
+	#share {
+		height:5vh;
+		width: 20vw;
+		margin-top: 1vh;
+	}
 }
 
 /* Nexus 7 */
@@ -1528,6 +1821,21 @@ input:disabled {
 	.graph {
 		height: 35vh;
 	}
+
+	#copyboxOn {
+		padding: 1.5vh 1vw;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 60vw;
+		margin-left: -30vw;
+		font-size: 1.25rem;
+	}
+
+	#share {
+		height:5vh;
+		width: 20vw;
+		margin-top: 3vh;
+	}
 }
 
 /* IPad/ IPad Mini */
@@ -1539,6 +1847,21 @@ input:disabled {
 	.list {
 		font-size: 1.5rem;
 	}
+
+	#copyboxOn {
+		padding: 1.5vh 1vw;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 40vw;
+		margin-left: -20vw;
+		font-size: 1.25rem;
+	}
+
+	#share {
+		height:7.5vh;
+		width: 25vw;
+		margin-top: 5vh;
+	}
 }
 
 /* IPad Pro 10.5 Inch */
@@ -1549,6 +1872,21 @@ input:disabled {
 
 	.list {
 		font-size: 1.75rem;
+	}
+
+	#copyboxOn {
+		padding: 1.75vh 1vw;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 40vw;
+		margin-left: -20vw;
+		font-size: 1.25rem;
+	}
+
+	#share {
+		height:7.5vh;
+		width: 25vw;
+		margin-top: 5vh;
 	}
 }
 
@@ -1580,5 +1918,20 @@ input:disabled {
 
 	.list {
 		font-size: 2.5rem;
+	}
+
+	#copyboxOn {
+		padding: 1.75vh 1vw;
+		height: 8vh;
+		margin-top: -4vh;
+		width: 40vw;
+		margin-left: -20vw;
+		font-size: 1.5rem;
+	}
+
+	#share {
+		height: 5vh;
+		width: 15vw;
+		margin-top: 4vh;
 	}
 }

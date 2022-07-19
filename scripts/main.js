@@ -200,3 +200,25 @@ window.onload = function() {
 	};
 	document.getElementById("table").scrollTo(0, document.getElementById("table").scrollHeight);
 };
+
+// Share results
+var btnShare = document.getElementById("share");
+
+var copyMessage = document.getElementById("copybox");
+
+btnShare.onclick = function () {
+	if (currentGuess === 1) {
+		navigator.clipboard.writeText(`I got today's Drugle in ${currentGuess} guess! I'm on a ${currentStreak} win streak now, try for yourself at https://drugle.today/!`)
+	} else {
+		navigator.clipboard.writeText(`I got today's Drugle in ${currentGuess} guesses! I'm on a ${currentStreak} win streak now, try for yourself at https://drugle.today/!`)
+	}
+	if (copyMessage.style.animationName === "fadeOut") {
+		copyMessage.style.animationName = "fadeOut2";
+	} else {
+		copyMessage.style.animationName = "fadeOut";
+	};
+	copyMessage.id = "copyboxOn";
+	copyMessage.addEventListener("animationend", function() {
+		copyMessage.id = "copybox";
+	});
+};

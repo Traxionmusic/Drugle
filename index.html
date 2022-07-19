@@ -27,10 +27,10 @@
 	<body>
 		<header>
 			<!-- Bar graph link to player stats -->
-			<input type="image" src="images/bar_graph.png" alt="Bar graph icon that shows statistics"  id="bar-graph" class="button">
+			<input type="image" src="images/bar_graph.png" id="bar-graph" class="button">
 			
 			<!-- Question mark link to how to play -->
-			<input type="image" src="images/question_mark.png" alt="Question mark icon that show how to play" id="question-mark" class="button">
+			<input type="image" src="images/question_mark.png" id="question-mark" class="button">
 		</header>
 
 		<main>
@@ -187,8 +187,11 @@
 					<p id="correct">You got it!</p><br>
 					<div id="correct-answer-image"></div>
 					<div id="correctAnswer"></div>
+					<div id="shareResults"><input type="image" src="images/share.png" id="share" class="button"></div>
 				</div>
 			</div>
+			<div id="copybox" class="fadeOut">Result copied to clipboard<br>
+							Share with your friends!</div>
 		</main>
 
 		<footer>
