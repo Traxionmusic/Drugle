@@ -11,8 +11,8 @@ const printAnswerDrug = listDrugs[answerDrugIndexNumber];
 const answerClassIndex = drugClass[answerDrugIndexNumber]; /* answer class in array */
 const answerIndicationIndex = drugIndication[answerDrugIndexNumber]; /* answer indication in array */
 const answerDosageFormsIndex = drugDosageForms[answerDrugIndexNumber]; /* answer dosage forms in array */
-const answerDrugImage = "<img class='images' src='images/answers/index" + answerDrugIndexNumber + "Answer.png'>";
-const answerHintImage = "<img class='images' src='images/hints/index" + answerDrugIndexNumber + "Hint.png'>";
+const answerDrugImage = "<img class='images' src='images/answers/index" + answerDrugIndexNumber + "Answer.webp'>";
+const answerHintImage = "<img class='images' src='images/hints/index" + answerDrugIndexNumber + "Hint.webp'>";
 
 if (! localStorage.noFirstVisit) {
     document.getElementById("question-mark-popup").style.display = "block";
