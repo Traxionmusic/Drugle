@@ -9,7 +9,7 @@ html, body{
     width:100%;
     height:100%;
     font-family: Rockwell;
-	background-color: #D0F4FB;
+	background-color: #C3F8F9;
 }
 
 /* Header */
@@ -17,7 +17,7 @@ header {
 	width:100%;
 	position: fixed;
 	top:0;
-	background-color: #E74054;
+	background-color: #A00B08;
 }
 
 #bar-graph,
@@ -30,8 +30,8 @@ footer {
 	width:100%;
 	position: fixed;
 	bottom: 0;
-	background-color: #E74054; 
-	color: #D0F4FB;
+	background-color: #A00B08; 
+	color: #C3F8F9;
 }
 
 #acknowledgements {
@@ -39,7 +39,7 @@ footer {
 }
 
 a {
-	color: #D0F4FB;
+	color: #C3F8F9;
 }
 
 a:hover {
@@ -51,7 +51,7 @@ a:hover {
 .subtitle {
 	display: flex;
 	justify-content: center;
-	color: #E74054;
+	color: #A00B08;
 }
 
 input:disabled {
@@ -72,7 +72,7 @@ input:disabled {
 	width: -webkit-fit-content;
 	width: -moz-fit-content;
 	width: fit-content;
-	color: #E74054;
+	color: #A00B08;
 }
 
 #image-hint:hover,
@@ -94,9 +94,9 @@ input:disabled {
 }
 
 .modal-content {
-	background-color: #E74054;
+	background-color: #A00B08;
 	padding: auto 1%;
-	color: #D0F4FB;
+	color: #C3F8F9;
 	font-weight: bold;
 	overflow:auto;
 }
@@ -108,7 +108,7 @@ input:disabled {
 
 .close:hover,
 .close:focus {
-	color: #D0F4FB;
+	color: #C3F8F9;
 	opacity: 100%;
 	text-decoration: none;
 	cursor: pointer;
@@ -146,8 +146,8 @@ input:disabled {
 	bottom: 0;
 	vertical-align: baseline;
 	text-align: center;
-	background-color: #D0F4FB;
-	color: #E74054;
+	background-color: #C3F8F9;
+	color: #A00B08;
 }
 
 .guessNumber {
@@ -171,7 +171,7 @@ input:disabled {
 	position: relative;
 	vertical-align: baseline;
 	text-align: center; 
-	color: #D0F4FB;
+	color: #C3F8F9;
 }
 
 #labels {
@@ -207,7 +207,7 @@ input:disabled {
 
 #yellow {
 	background-color: yellow;
-	color : #E74054;
+	color : #A00B08;
 }
 
 #copybox {
@@ -345,9 +345,9 @@ input:disabled {
 
 @-webkit-keyframes colorchange {
 	0% {
-		border-color: #D0F4FB;
-		background-color: #D0F4FB;
-		color: #D0F4FB;
+		border-color: #C3F8F9;
+		background-color: #C3F8F9;
+		color: #C3F8F9;
 	}
 
 	100% {
@@ -357,9 +357,9 @@ input:disabled {
 }
 @keyframes colorchange {
 	0% {
-		border-color: #D0F4FB;
-		background-color: #D0F4FB;
-		color: #D0F4FB;
+		border-color: #C3F8F9;
+		background-color: #C3F8F9;
+		color: #C3F8F9;
 	}
 
 	100% {
