@@ -524,14 +524,14 @@ input:disabled {
 @media only screen and (max-width: 575.98px) {
 	/* Header */
 	header {
-		height: 3%;
+		height: 5%;
 	}
 
 	#bar-graph,
 	#question-mark {
-		height: 75%;
-		margin-top: 1%;
-		width: 5%;
+		height: 60%;
+		margin-top: 2.5%;
+		width: 7.5%;
 		margin-left: -2.5%;
 	}
 
@@ -556,8 +556,8 @@ input:disabled {
 
 	/* Main Screen */
 	.title {
-		font-size: 1.25rem;
-		margin-bottom: 1%;
+		font-size: 1.5rem;
+		margin-top: 5%;
 	}
 
 	.subtitle {
@@ -593,12 +593,12 @@ input:disabled {
 
 	/* Bar Graph Modal (stats) */
 	.stat {	
-		font-size: 0.75rem;
+		font-size: 1rem;
 		margin-bottom: 5%;
 	}
 
 	.graph {
-		margin-top: 40%;
+		margin-top: 30%;
 		height: 50%;
 	}
 
@@ -625,7 +625,7 @@ input:disabled {
 	}
 
 	#instruction-title {
-		font-size: 1.75rem;
+		font-size: 1.5rem;
 		margin-top: -2.5%;
 		padding-left: 2.5%;
 		padding-right: 2.5%;
@@ -669,12 +669,12 @@ input:disabled {
 
 	#correct {
 		font-size: 2rem;
-		margin-top: -10%;
-		margin-bottom: -15%;
+		margin-top: -5%;
+		margin-bottom: -10%;
 	}
 
 	#correctAnswer {
-		font-size: 0.75rem;
+		font-size: 1rem;
 		margin-top: 2.5%;
 	}
 
