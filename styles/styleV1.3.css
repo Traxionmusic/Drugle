@@ -557,7 +557,7 @@ input:disabled {
 	/* Main Screen */
 	.title {
 		font-size: 1.5rem;
-		margin-top: 5%;
+		margin-top: 7.5%;
 	}
 
 	.subtitle {
@@ -582,7 +582,7 @@ input:disabled {
 	/* General Modal Specs */
 	.modal-content {
 		margin: 35% auto;
-		height: 55%;
+		height: 60%;
 		width: 75%;
 	}
 
