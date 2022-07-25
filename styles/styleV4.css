@@ -531,8 +531,8 @@ input:disabled {
 	#question-mark {
 		height: 60%;
 		margin-top: 2.5%;
-		width: 7.5%;
-		margin-left: -2.5%;
+		width: 6%;
+		margin-left: -3%;
 	}
 
 	#bar-graph {
@@ -540,7 +540,7 @@ input:disabled {
 	}
 
 	#question-mark {
-		left: 75%;
+		left: 70%;
 	}
 
 	/* Footer */
@@ -739,7 +739,7 @@ input:disabled {
 	}
 	
 	#question-mark {
-		left: 75%;
+		left: 70%;
 	}
 
 	/* Footer */
@@ -932,7 +932,7 @@ input:disabled {
 	}
 
 	#question-mark {
-		left: 75%;
+		left: 70%;
 	}
 
 	/* Footer */
@@ -1126,7 +1126,7 @@ input:disabled {
 	}
 
 	#question-mark {
-		left: 75%;
+		left: 70%;
 	}
 
 	/* Footer */
@@ -1321,7 +1321,7 @@ input:disabled {
 	}
 
 	#question-mark {
-		left: 75%;
+		left: 72.5%;
 	}
 
 	/* Footer */
