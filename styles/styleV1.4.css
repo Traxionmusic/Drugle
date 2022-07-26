@@ -260,7 +260,7 @@ input:disabled {
 	margin-right: auto;
 	text-align: center;
 	display: none;
-	width: 95%;
+	width: 75%;
 }
 
 .divTableRow {
@@ -275,8 +275,8 @@ input:disabled {
 	vertical-align: middle;
 	min-height: 5%;
 	max-height: 10%;
-	max-width: 23.75%;
-	width: 23.75%;
+	max-width: 25%;
+	width: 25%;
 }
 
 .divTableHeading {
@@ -311,8 +311,8 @@ input:disabled {
 	vertical-align: middle;
 	min-height: 5%;
 	max-height: 10%;
-	max-width: 23.75%;
-	width: 23.75%;
+	max-width: 25%;
+	width: 25%;
 }
 
 [id*="row-"] {
